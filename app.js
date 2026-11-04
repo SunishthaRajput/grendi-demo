@@ -133,19 +133,19 @@ const PRODUCTS = [
  {id:'p2', sid:'s2', cat:'women', kind:'new', img:'1769349661389-0737f39a8507', price:18000, sizes:['M','L'], cond:'new', neg:true,
   name:{fr:'Ensemble wax assorti (2 pièces)', en:'Matching wax print set (2 pieces)'}, desc:{fr:'Haut et jupe en wax, parfait pour les cérémonies. Sur mesure possible sous 5 jours.', en:'Wax top and skirt, ideal for ceremonies. Made to measure in 5 days.'}},
  {id:'p3', sid:'s1', cat:'women', kind:'thrift', img:'1601653233006-5c9fd30eab12', price:6500, sizes:['M'], cond:'a', neg:true,
-  name:{fr:'Robe d’été sans manches', en:'Sleeveless summer dress'}, desc:{fr:'Friperie importée, triée à la main. Portée une ou deux fois.', en:'Imported thrift, hand-sorted. Worn once or twice.'}},
- {id:'p4', sid:'s1', cat:'women', kind:'thrift', img:'1611853904829-6d0f4034ce2f', price:5000, sizes:['S','M'], cond:'a', neg:true,
-  name:{fr:'Robe fleurie légère', en:'Light floral dress'}, desc:{fr:'Tissu fluide, idéal pour la chaleur de Douala.', en:'Flowing fabric, ideal for Douala heat.'}},
+  name:{fr:'Robe longue imprimée, coupe asymétrique', en:'Long print dress, asymmetric cut'}, desc:{fr:'Seconde main, portée une fois pour un mariage.', en:'Second hand, worn once to a wedding.'}},
+ {id:'p4', sid:'s1', cat:'women', kind:'thrift', img:'1520006403909-838d6b92c22e', price:5000, sizes:['S','M'], cond:'a', neg:true,
+  name:{fr:'Robes fleuries friperie, plusieurs modèles', en:'Thrift floral dresses, several styles'}, desc:{fr:'Tissu fluide, idéal pour la chaleur de Douala. Choisissez le modèle dans le chat.', en:'Flowing fabric, ideal for Douala heat. Pick the style in the chat.'}},
  {id:'p5', sid:'s1', cat:'women', kind:'thrift', img:'1625646741211-711bdd65c570', price:4500, sizes:['L'], cond:'b', neg:true,
-  name:{fr:'Robe rouge à fleurs', en:'Red floral dress'}, desc:{fr:'Bon état, petite retouche à l’ourlet.', en:'Good condition, small hem repair.'}},
+  name:{fr:'Haut rouge à motifs, épaules dénudées', en:'Red patterned off-shoulder top'}, desc:{fr:'Bon état, petite retouche à l’ourlet.', en:'Good condition, small hem repair.'}},
  {id:'p6', sid:'s2', cat:'women', kind:'new', img:'1760907949889-eb62b7fd9f75', price:9000, sizes:['S','M','L'], cond:'new', neg:false,
-  name:{fr:'Robe à motifs, manches courtes', en:'Patterned short-sleeve dress'}, desc:{fr:'Nouvelle collection, plusieurs tailles en stock.', en:'New collection, several sizes in stock.'}},
+  name:{fr:'Robe bustier en pagne', en:'Strapless print dress'}, desc:{fr:'Nouvelle collection, plusieurs tailles en stock.', en:'New collection, several sizes in stock.'}},
  {id:'p7', sid:'s2', cat:'men', kind:'new', img:'1530884698386-d42ad3199b1f', price:22000, sizes:['M','L','XL'], cond:'new', neg:true,
   name:{fr:'Veste de costume fleurie homme', en:'Men’s floral suit jacket'}, desc:{fr:'Pour mariages et sorties. Coupe ajustée.', en:'For weddings and evenings out. Slim fit.'}},
  {id:'p8', sid:'s1', cat:'men', kind:'thrift', img:'1611312449408-fcece27cdbb7', price:7500, sizes:['L'], cond:'a', neg:true,
   name:{fr:'Veste en jean délavé', en:'Washed denim jacket'}, desc:{fr:'Friperie Grade A, boutons d’origine, aucune tache.', en:'Grade A thrift, original buttons, no stains.'}},
  {id:'p9', sid:'s1', cat:'men', kind:'thrift', img:'1608147152875-b0eb0c53d491', price:4000, sizes:['M','L'], cond:'a', neg:true,
-  name:{fr:'Chemise en jean', en:'Denim shirt'}, desc:{fr:'Manches longues, se porte ouverte ou fermée.', en:'Long sleeves, wear open or buttoned.'}},
+  name:{fr:'Veste en jean clair avec badges', en:'Light denim jacket with patches'}, desc:{fr:'Friperie customisée, badges cousus à la main.', en:'Customised thrift, hand-sewn patches.'}},
  {id:'p10', sid:'s3', cat:'men', kind:'new', img:'1581655353564-df123a1eb820', price:2500, sizes:['M','L','XL','XXL'], cond:'new', neg:false,
   name:{fr:'T-shirt blanc 100 % coton', en:'White 100% cotton T-shirt'}, desc:{fr:'Vendu à l’unité ou en lot (voir le lot de 20).', en:'Sold singly or as a lot (see the lot of 20).'}},
  {id:'p11', sid:'s3', cat:'men', kind:'wholesale', img:'1562157873-818bc0726f68', price:30000, sizes:['Mix'], cond:'new', neg:true, lot:20,
@@ -165,13 +165,13 @@ const PRODUCTS = [
  {id:'p18', sid:'s1', cat:'women', kind:'thrift', img:'1540221652346-e5dd6b50f3e7', price:3000, sizes:['S','M','L'], cond:'b', neg:true,
   name:{fr:'Hauts friperie, au choix', en:'Thrift tops, your pick'}, desc:{fr:'Choisissez votre couleur dans le chat.', en:'Pick your colour in the chat.'}}
 ];
-const SELL_PHOTOS = ['1540221652346-e5dd6b50f3e7','1582719188393-bb71ca45dbb9','1470309864661-68328b2cd0a5','1622290291468-a28f7a7dc6a8','1564584217132-2271feaeb3c5','1543076447-215ad9ba6923','1560506840-ec148e82a604','1520006403909-838d6b92c22e'];
+const SELL_PHOTOS = ['1540221652346-e5dd6b50f3e7','1582719188393-bb71ca45dbb9','1470309864661-68328b2cd0a5','1622290291468-a28f7a7dc6a8','1564584217132-2271feaeb3c5','1543076447-215ad9ba6923','1560506840-ec148e82a604','1604072374690-0e7d7bddd54e'];
 
 const RANK = {placed:1, confirmed:2, ready:3, assigned:4, picked:5, completed:6, cancelled:0, refused:0, disputed:6};
 const STEP_MIN = {confirmed:18, ready:24, assigned:4, picked:16, completed:31};
 
 /* ================= state ================= */
-const KEY = 'grendi-demo-v1';
+const KEY = 'grendi-demo-v2';
 const START = 9*60 + 5; // 09:05
 function seed(){
   return {
