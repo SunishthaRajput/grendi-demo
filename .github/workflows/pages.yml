@@ -24,17 +24,6 @@ jobs:
             code=$(curl -s -o /dev/null -w '%{http_code}' "https://images.unsplash.com/photo-$id?w=200")
             echo "$code $id"
           done
-      - name: Save photo thumbnails for review
-        run: |
-          mkdir -p /tmp/thumbs
-          for id in $(grep -oE "[0-9]{10,13}-[0-9a-f]{12}" app.js | sort -u); do
-            curl -s -o "/tmp/thumbs/$id.jpg" "https://images.unsplash.com/photo-$id?w=240&q=60&auto=format&fm=jpg"
-          done
-      - uses: actions/upload-artifact@v4
-        with:
-          name: photo-thumbnails
-          path: /tmp/thumbs
-          retention-days: 3
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
