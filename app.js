@@ -61,7 +61,12 @@ fr:{
   refundBuyer:'Rembourser l’acheteur', releaseSeller:'Payer le vendeur', resolved:'Résolu', dispute:'Litige', claim:'Réclamation', evidence:'Preuves',
   commissionPct:'Commission sur les ventes (%)', deliveryFees:'Frais de livraison par quartier (FCFA)', codOn:'Paiement à la livraison autorisé', codLimit:'Plafond d’espèces par livreur (FCFA)', confirmWin:'Délai de confirmation vendeur (heures)', settingsNote:'Les changements s’appliquent tout de suite dans les apps.',
   zoneL:'Zone', rating:'Note', state:'État', busy:'En course', loggedAs:'Connecté en tant que',
-  minutes:'min', hAgo:'il y a', step:'Étape'
+  minutes:'min', hAgo:'il y a', step:'Étape',
+  liveTrack:'Suivi en direct', arrivesIn:'Arrive dans', arrived:'Arrivé', searching:'Recherche d’un livreur à proximité…', nearbyRiders:'livreurs à proximité',
+  toSellerB:'récupère votre colis chez', toBuyerB:'est en route vers vous', toSellerS:'arrive à votre boutique', toSellerR:'Direction', toBuyerR:'Direction',
+  arrivedSeller:'est arrivé à votre boutique. Demandez-lui son code.', arrivedBuyer:'est arrivé ! Vérifiez l’article, puis donnez votre code.', arrivedRiderS:'Vous êtes arrivé chez le vendeur. Montrez votre code.', arrivedRiderB:'Vous êtes arrivé chez le client. Demandez son code.',
+  skip:'Avancer jusqu’à l’arrivée', lightMap:'Carte légère (moins de 15 Ko) : fonctionne même en 2G.', gpsLive:'GPS en direct', smsPos:'Sans données : position envoyée par SMS toutes les 2 min',
+  liveMap:'Carte en direct', fleet:'Flotte en direct', idle:'Disponible', eta:'Arrivée', trackLink:'Suivi', shop:'Vendeur', you:'Vous'
 },
 en:{
   demo:'Demo', buyer:'Buyer', seller:'Seller', rider:'Rider', admin:'Admin', reset:'Reset demo',
@@ -113,7 +118,12 @@ en:{
   refundBuyer:'Refund buyer', releaseSeller:'Pay seller', resolved:'Resolved', dispute:'Dispute', claim:'Claim', evidence:'Evidence',
   commissionPct:'Commission on sales (%)', deliveryFees:'Delivery fees by neighbourhood (FCFA)', codOn:'Cash on delivery allowed', codLimit:'Cash limit per rider (FCFA)', confirmWin:'Seller confirmation window (hours)', settingsNote:'Changes apply in the apps straight away.',
   zoneL:'Zone', rating:'Rating', state:'State', busy:'On a job', loggedAs:'Signed in as',
-  minutes:'min', hAgo:'ago', step:'Step'
+  minutes:'min', hAgo:'ago', step:'Step',
+  liveTrack:'Live tracking', arrivesIn:'Arrives in', arrived:'Arrived', searching:'Finding a rider nearby…', nearbyRiders:'riders nearby',
+  toSellerB:'is collecting your parcel from', toBuyerB:'is on the way to you', toSellerS:'is coming to your shop', toSellerR:'Heading to', toBuyerR:'Heading to',
+  arrivedSeller:'has arrived at your shop. Ask for his code.', arrivedBuyer:'has arrived! Check the item, then give your code.', arrivedRiderS:'You’ve arrived at the seller. Show your code.', arrivedRiderB:'You’ve arrived at the buyer. Ask for their code.',
+  skip:'Skip to arrival', lightMap:'Light map (under 15 KB): works even on 2G.', gpsLive:'Live GPS', smsPos:'No data: position sent by SMS every 2 min',
+  liveMap:'Live map', fleet:'Live fleet', idle:'Available', eta:'Arrival', trackLink:'Track', shop:'Seller', you:'You'
 }};
 
 /* ================= data ================= */
@@ -171,7 +181,7 @@ const RANK = {placed:1, confirmed:2, ready:3, assigned:4, picked:5, completed:6,
 const STEP_MIN = {confirmed:18, ready:24, assigned:4, picked:16, completed:31};
 
 /* ================= state ================= */
-const KEY = 'grendi-demo-v2';
+const KEY = 'grendi-demo-v3';
 const START = 9*60 + 5; // 09:05
 function seed(){
   return {
@@ -451,7 +461,7 @@ function bOrder(id){
   const done = o.status==='completed';
   const rate = done && !S.rated[o.id] ? `<div class="card" style="text-align:center"><b>${t('rateSeller')} · ${s.name}</b><div class="stars">${[1,2,3,4,5].map(n=>`<button data-a="rate" data-v="${o.id}" data-n="${n}" aria-label="${n}" style="color:${n<=(ui.input.stars||0)?'var(--y)':'#d5dbd8'}">${icFill('star')}</button>`).join('')}</div><button class="btn sm" style="justify-self:center" data-a="rate-send" data-v="${o.id}" ${ui.input.stars?'':'disabled'}>${t('submit')}</button></div>` : done ? `<div class="note n-g">${ic('check')}<span>${t('rateThanks')}</span></div>` : '';
   return `<div class="body"><div class="ah"><button class="ib" data-a="nav" data-v="orders">${ic('back')}</button><h2>${o.id}</h2><span class="chip ${r===0?'c-r':done?'c-g':'c-y'}">${t('st_'+o.status)}</span></div><div class="pad">
-    ${top}${rider}
+    ${(r>=3 && r<=5) ? trackMap(o,'buyer') : ''}${top}${rider}
     <div class="card">${trackList(o)}</div>
     <div class="li"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${s.name} · ${t('size')} ${esc(o.size)}</span></span></div>
     <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${t('delivery')} (${o.zone})</span><span>${fcfa(o.fee)}</span></div><div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(o.price+o.fee)}</span></div><div class="kv"><span>${t('payWith')}</span><span>${t(o.pay)}</span></div>
@@ -585,12 +595,12 @@ function sOrder(id){
   } else if(o.status==='confirmed'){
     act = `<button class="btn" data-a="s-ready" data-v="${id}">${ic('bag')}${t('markReady')}</button>`;
   } else if(o.status==='ready'){
-    act = `<div class="note n-b">${ic('bike')}<span>${t('findingRider')}</span></div>`;
+    act = trackMap(o,'seller');
   } else if(o.status==='assigned'){
-    act = `<div class="card"><div class="seller"><span class="av" style="background:var(--g2)">${initials(RIDER.name)}</span><div style="flex:1"><b>${RIDER.name}</b> <span class="xs mut">${t('riderComing')}</span><div class="xs mut">${RIDER.bike}</div></div><button class="ib" data-a="call" data-v="rider">${ic('phone')}</button></div>
+    act = trackMap(o,'seller') + `<div class="card"><div class="seller"><span class="av" style="background:var(--g2)">${initials(RIDER.name)}</span><div style="flex:1"><b>${RIDER.name}</b> <span class="xs mut">${t('riderComing')}</span><div class="xs mut">${RIDER.bike}</div></div><button class="ib" data-a="call" data-v="rider">${ic('phone')}</button></div>
       <div class="field"><label>${t('enterPickup')}</label><input class="inp" id="pk-code" inputmode="numeric" maxlength="4" placeholder="••••" style="font:800 24px/1 var(--disp);letter-spacing:.3em;text-align:center"></div><p class="xs mut">${t('pickupHint')}</p>${ui.err?`<p class="xs" style="color:var(--red)">${t('wrongCode')}</p>`:''}<button class="btn" data-a="s-pickup" data-v="${id}">${t('validate')}</button></div>`;
   } else if(o.status==='picked'){
-    act = `<div class="note n-g">${ic('check')}<span>${t('handed')}</span></div>`;
+    act = `<div class="note n-g">${ic('check')}<span>${t('handed')}</span></div>` + trackMap(o,'seller');
   } else if(o.status==='completed'){
     act = `<div class="note n-g">${ic('coins')}<span>${t('paidTo')} MTN MoMo +237 ${SELLERS[o.sid].phone} : <b>${fcfa(o.price*(1-c))}</b></span></div>`;
   }
@@ -651,7 +661,7 @@ function rHome(){
 function rJob(id){
   const o = O(id); const s = SELLERS[o.sid];
   const atSeller = o.status==='assigned';
-  const map = `<div class="map"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><path d="M40 110 C 90 40, 160 130, 250 40" stroke="var(--g)" stroke-width="4" fill="none" stroke-dasharray="${atSeller?'0':'8 6'}"/></svg><div class="pin" style="left:10%;top:62%;background:var(--y)"><b style="color:#111">V</b></div><div class="pin" style="left:80%;top:15%;background:var(--g)"><b>C</b></div></div>`;
+  const map = trackMap(o,'rider');
   let body;
   if(atSeller){
     body = `<div class="card"><span class="xs mut">${t('goSeller')}</span><div class="seller"><span class="av" style="background:${s.color}">${initials(s.name)}</span><div style="flex:1"><b>${s.name}</b><div class="xs mut">${s.zone} · Marché, ${S.lang==='fr'?'entrée principale':'main entrance'}</div></div><button class="ib" data-a="call" data-v="${s.id}">${ic('phone')}</button></div></div>
@@ -683,8 +693,8 @@ function adminApp(){
   const n = S.nav.admin.s;
   const pv = S.apps.filter(a=>a.status==='pending').length + S.products.filter(p=>p.status==='pending').length;
   const pd = S.disputes.filter(d=>d.status==='open').length;
-  const nav = [['overview',t('overview')],['orders',t('aOrders')],['verify',t('aVerify'),pv],['payments',t('aPayments')],['disputes',t('aDisputes'),pd],['riders',t('aRiders')],['settings',t('aSettings')]];
-  const views = {overview:aOverview, orders:aOrders, verify:aVerify, payments:aPayments, disputes:aDisputes, riders:aRiders, settings:aSettings};
+  const nav = [['overview',t('overview')],['orders',t('aOrders')],['verify',t('aVerify'),pv],['payments',t('aPayments')],['disputes',t('aDisputes'),pd],['live',t('liveMap')],['riders',t('aRiders')],['settings',t('aSettings')]];
+  const views = {overview:aOverview, orders:aOrders, verify:aVerify, payments:aPayments, disputes:aDisputes, live:aLive, riders:aRiders, settings:aSettings};
   return `<div class="admin"><nav class="anav"><div class="brand"><span class="logo">g</span>Grendi Ops</div>${nav.map(([k,l,c])=>`<button data-a="nav" data-v="${k}" aria-current="${n===k}">${l}${c?`<span class="cnt">${c}</span>`:''}</button>`).join('')}
     <div class="who"><span>${t('loggedAs')}</span><b style="color:#fff">ops@grendi.cm</b><div class="lang" style="justify-self:start"><button data-a="lang" data-v="fr" aria-pressed="${S.lang==='fr'}">FR</button><button data-a="lang" data-v="en" aria-pressed="${S.lang==='en'}">EN</button></div><button class="ghost" data-a="logout" style="justify-self:start">${t('logout')}</button></div></nav>
     <div class="acont">${ui.adminFlash?`<div class="note n-g">${ic('check')}<span>${esc(ui.adminFlash)}</span></div>`:''}${views[n]()}</div></div>`;
@@ -739,6 +749,110 @@ function aSettings(){
     <h3>${t('deliveryFees')}</h3><div class="card" style="max-width:640px">${ZONES.map(z=>`<div class="set"><span>${z}</span><input class="inp" id="fee-${z}" inputmode="numeric" value="${s.fees[z]}" data-a="fee" data-k="${z}"></div>`).join('')}</div>`;
 }
 
+/* ================= live tracking ================= */
+const NODES = {'Bonabéri':[42,72],'Pont':[98,100],'Akwa':[152,112],'Bonapriso':[126,170],'Deïdo':[176,58],'Bépanda':[232,84],'Makepe':[274,106],'Bonamoussadi':[306,40],'Ndokotti':[236,150],'Logbaba':[308,182]};
+const EDGES = [['Bonabéri','Pont'],['Pont','Akwa'],['Akwa','Bonapriso'],['Akwa','Deïdo'],['Akwa','Ndokotti'],['Deïdo','Bépanda'],['Bépanda','Makepe'],['Bépanda','Ndokotti'],['Makepe','Bonamoussadi'],['Deïdo','Bonamoussadi'],['Ndokotti','Logbaba'],['Ndokotti','Makepe'],['Bonapriso','Ndokotti'],['Makepe','Logbaba']];
+const KM_PX = 0.034;            // 1 map px ≈ 34 m
+const TRIP = {toSeller:40000, toBuyer:55000}; // real ms the demo animation lasts
+const dist2 = (a,b) => Math.hypot(NODES[a][0]-NODES[b][0], NODES[a][1]-NODES[b][1]);
+function route(a,b){
+  const d={}, prev={}, q=new Set(Object.keys(NODES)); Object.keys(NODES).forEach(n=>d[n]=Infinity); d[a]=0;
+  while(q.size){ let u=null; q.forEach(n=>{ if(u===null||d[n]<d[u]) u=n; }); q.delete(u); if(u===b) break;
+    EDGES.forEach(([x,y])=>{ const v = x===u?y : y===u?x : null; if(v && q.has(v)){ const nd=d[u]+dist2(u,v); if(nd<d[v]){ d[v]=nd; prev[v]=u; } } }); }
+  const path=[b]; while(path[0]!==a && prev[path[0]]) path.unshift(prev[path[0]]); return path;
+}
+const segLens = names => names.slice(1).map((n,i)=>dist2(names[i],n));
+function pointAt(names, f){
+  const L = segLens(names); const tot = L.reduce((a,b)=>a+b,0)||1; let d = f*tot;
+  for(let i=0;i<L.length;i++){ if(d<=L[i] || i===L.length-1){ const k = L[i]? Math.min(1,d/L[i]) : 1; const A=NODES[names[i]], B=NODES[names[i+1]]; return {x:A[0]+(B[0]-A[0])*k, y:A[1]+(B[1]-A[1])*k, seg:i, tot}; } d-=L[i]; }
+  const Z=NODES[names[names.length-1]]; return {x:Z[0], y:Z[1], seg:names.length-2, tot};
+}
+const prog = o => o.trk ? Math.min(1, Math.max(0,(Date.now()-o.trk.t0)/o.trk.dur)) : 0;
+function startTrip(o, phase){
+  const sz = SELLERS[o.sid].zone;
+  const from = phase==='toSeller' ? (['Bépanda','Ndokotti','Deïdo','Akwa'].find(z=>z!==sz && z!==o.zone && route(z,sz).length>2) || ['Bépanda','Ndokotti','Akwa'].find(z=>z!==sz && z!==o.zone)) : sz;
+  const to = phase==='toSeller' ? sz : o.zone;
+  o.trk = {phase, path: route(from,to), t0:Date.now(), dur:TRIP[phase], min: phase==='toSeller'?STEP_MIN.picked:STEP_MIN.completed, arrived:false};
+}
+const activeTrip = o => o.trk && ((o.status==='assigned' && o.trk.phase==='toSeller') || (o.status==='picked' && o.trk.phase==='toBuyer'));
+const km = px => (px*KM_PX).toFixed(1).replace('.', S.lang==='fr'?',':'.') + ' km';
+function baseMap(){
+  const roads = EDGES.map(([a,b])=>`<line x1="${NODES[a][0]}" y1="${NODES[a][1]}" x2="${NODES[b][0]}" y2="${NODES[b][1]}"/>`).join('');
+  const labels = Object.entries(NODES).filter(([n])=>n!=='Pont').map(([n,[x,y]])=>`<text x="${x}" y="${y-9}" text-anchor="middle">${n}</text>`).join('');
+  return `<rect width="340" height="210" fill="var(--map-land)"/>
+   <path d="M0 196 C 40 170, 70 140, 80 104 S 92 30, 118 0 L 96 0 C 72 30, 70 70, 62 100 S 30 160, 0 176 Z" fill="var(--map-water)"/>
+   <text x="18" y="150" class="riv">Wouri</text>
+   <rect x="196" y="112" width="26" height="18" rx="4" fill="var(--map-park)"/><rect x="268" y="138" width="22" height="16" rx="4" fill="var(--map-park)"/><rect x="150" y="128" width="20" height="14" rx="3" fill="var(--map-park)"/>
+   <g class="rd-o">${roads}</g><g class="rd">${roads}</g><g class="lbl">${labels}</g>`;
+}
+const pinSvg = (x,y,color,label) => `<g transform="translate(${x},${y})"><path d="M0 0 C -9 -10,-9 -22,0 -22 C 9 -22,9 -10,0 0Z" fill="${color}" stroke="#fff" stroke-width="1.5"/><text y="-11" text-anchor="middle" class="pin-t">${label}</text></g>`;
+const riderSvg = `<g class="rmk"><circle r="15" class="halo"/><circle r="10" fill="var(--g)" stroke="#fff" stroke-width="2.5"/><path d="M-5 2.5 a2.2 2.2 0 1 0 .1 0M5 2.5 a2.2 2.2 0 1 0 .1 0M-5 2.5 L-1.5 -3 H2.5 L5 2.5 M-1 -3 L0 -5.5" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></g>`;
+function trackMap(o, who){
+  // who: buyer | seller | rider
+  const sz = SELLERS[o.sid].zone; const S0=NODES[sz], B0=NODES[o.zone];
+  const pins = pinSvg(S0[0],S0[1],'var(--amber)','V') + pinSvg(B0[0],B0[1],'var(--blue)','C');
+  if(o.status==='ready'){
+    const ghosts=[[-34,-18],[30,-26],[22,30]].map(([dx,dy],i)=>`<g class="ghost g${i}" transform="translate(${S0[0]+dx},${S0[1]+dy})"><circle r="7" fill="var(--g2)" opacity=".85" stroke="#fff" stroke-width="2"/></g>`).join('');
+    return `<div class="lmap"><svg viewBox="0 0 340 210" role="img" aria-label="${t('searching')}">${baseMap()}<circle cx="${S0[0]}" cy="${S0[1]}" r="40" class="radar"/>${ghosts}${pins}</svg>
+      <div class="trk-bar"><div class="row"><span class="gps"></span><b>${t('searching')}</b></div><span class="xs mut">3 ${t('nearbyRiders')} · ${t('lightMap')}</span></div></div>`;
+  }
+  if(!activeTrip(o)) return '';
+  const pts = o.trk.path.map(n=>NODES[n].join(',')).join(' ');
+  const toSeller = o.trk.phase==='toSeller';
+  const head = who==='rider' ? `${t(toSeller?'toSellerR':'toBuyerR')} <b data-next></b>` :
+    who==='seller' ? `<b>${RIDER.name.split(' ')[0]}</b> ${toSeller? t('toSellerS') : t('toBuyerB').replace('vous', o.buyer).replace('you', o.buyer)}` :
+    `<b>${RIDER.name.split(' ')[0]}</b> ${toSeller? t('toSellerB')+' '+SELLERS[o.sid].name : t('toBuyerB')}`;
+  return `<div class="lmap" data-trk="${o.id}" data-who="${who}"><div class="trk-top"><span class="chip c-g"><span class="gps"></span>${t('gpsLive')}</span><span class="sm">${head}</span></div>
+    <svg viewBox="0 0 340 210" role="img" aria-label="${t('liveTrack')}">${baseMap()}<polyline points="${pts}" class="rt"/><polyline points="${pts}" class="rt-done" data-done/>${pins}<g data-rider>${riderSvg}</g></svg>
+    <div class="trk-bar"><div style="display:grid;gap:2px"><b class="eta" data-eta>…</b><span class="xs mut" data-dist></span></div>
+      <div class="pbar"><i data-pbar></i></div><button class="btn sec sm" data-a="trk-skip" data-v="${o.id}">${t('skip')} ⏩</button></div>
+    ${who==='rider' && S.rider.noData ? `<p class="xs mut" style="padding:0 12px 10px">${t('smsPos')}</p>` : ''}</div>`;
+}
+function updateMap(el){
+  const o = O(el.dataset.trk); if(!o || !o.trk) return;
+  const p = prog(o); const pos = pointAt(o.trk.path, p);
+  const r = el.querySelector('[data-rider]'); r && r.setAttribute('transform', `translate(${pos.x.toFixed(1)},${pos.y.toFixed(1)})`);
+  const done = el.querySelector('[data-done]');
+  if(done){ const pts = o.trk.path.slice(0,pos.seg+1).map(n=>NODES[n].join(',')); pts.push(pos.x.toFixed(1)+','+pos.y.toFixed(1)); done.setAttribute('points', pts.join(' ')); }
+  const eta = el.querySelector('[data-eta]'), d = el.querySelector('[data-dist]'), nx = el.querySelector('[data-next]'), pb = el.querySelector('[data-pbar]');
+  const left = Math.max(1, Math.ceil(o.trk.min*(1-p)));
+  if(eta) eta.textContent = p>=1 ? t('arrived')+' ✓' : `${t('arrivesIn')} ${left} ${t('minutes')} · ${t('eta')} ${hm(S.clock+left)}`;
+  if(d) d.textContent = p>=1 ? (el.dataset.who==='rider' ? t(o.trk.phase==='toSeller'?'arrivedRiderS':'arrivedRiderB') : '') : km(pos.tot*(1-p));
+  if(nx) nx.textContent = o.trk.path[Math.min(o.trk.path.length-1, pos.seg+1)];
+  if(pb) pb.style.width = (p*100).toFixed(1)+'%';
+  const sk = el.querySelector('[data-a="trk-skip"]'); if(sk) sk.hidden = p>=1;
+}
+const FLEET = [['Didier M.','Deïdo','Bonamoussadi',70],['Clovis E.','Makepe','Logbaba',62],['Rodrigue N.','Bonabéri','Akwa',80],['Hervé K.','Logbaba','Bonapriso',90],['Steve A.','Ndokotti','Deïdo',66],['Patrick E.','Bonapriso','Akwa',58]];
+function fleetPos(i){ const [n,a,b,sec] = FLEET[i]; const path = route(a,b); const ph = ((Date.now()/1000 + i*17) % (sec*2)) / sec; return pointAt(path, ph<=1?ph:2-ph); }
+function updateFleet(el){
+  FLEET.forEach((f,i)=>{ const g = el.querySelector(`[data-f="${i}"]`); if(g){ const p=fleetPos(i); g.setAttribute('transform',`translate(${p.x.toFixed(1)},${p.y.toFixed(1)})`); } });
+  const o = S.orders.find(x=>x.demo && activeTrip(x)); const g = el.querySelector('[data-f="me"]');
+  if(g){ const p = o ? pointAt(o.trk.path, prog(o)) : {x:NODES.Akwa[0]+10, y:NODES.Akwa[1]+6}; g.setAttribute('transform',`translate(${p.x.toFixed(1)},${p.y.toFixed(1)})`); }
+}
+function aLive(){
+  const o = S.orders.find(x=>x.demo && activeTrip(x));
+  const dots = FLEET.map((f,i)=>`<g data-f="${i}"><circle r="6" fill="#7d9188" stroke="#fff" stroke-width="2"/><text y="-9" text-anchor="middle" class="fl-t">${f[0]}</text></g>`).join('');
+  const route0 = o ? `<polyline points="${o.trk.path.map(n=>NODES[n].join(',')).join(' ')}" class="rt"/>` : '';
+  const rows = [[RIDER.name, o ? `${o.id} · ${t('st_'+o.status)}` : t('idle'), o ? `<span data-trk-eta="${o.id}"></span>` : '—']].concat(FLEET.map((f,i)=>[f[0], `${f[1]} → ${f[2]}`, i%3===0?t('idle'):t('busy')]));
+  return `<h2>${t('liveMap')}</h2><p class="mut">${t('lightMap')}</p>
+   <div class="lmap big" data-fleet>${o?`<div style="display:none" data-trk="${o.id}" data-who="admin"></div>`:''}<svg viewBox="0 0 340 210">${baseMap()}${route0}${o?pinSvg(NODES[SELLERS[o.sid].zone][0],NODES[SELLERS[o.sid].zone][1],'var(--amber)','V')+pinSvg(NODES[o.zone][0],NODES[o.zone][1],'var(--blue)','C'):''}${dots}<g data-f="me">${riderSvg}<text y="-16" text-anchor="middle" class="fl-t me">${RIDER.name.split(' ')[0]}</text></g></svg></div>
+   <div class="tw"><table><thead><tr><th>${t('rider')}</th><th>${t('state')}</th><th>${t('eta')}</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function arrivalNotify(o){
+  const r = RIDER.name.split(' ')[0];
+  if(o.trk.phase==='toSeller'){ notify('seller', `${r} ${t('arrivedSeller')}`); notify('rider', t('arrivedRiderS')); }
+  else { notify('buyer', `${r} ${t('arrivedBuyer')}`, 'sms'); notify('rider', t('arrivedRiderB')); }
+}
+function tick(){
+  let changed = false;
+  S.orders.forEach(o=>{ if(activeTrip(o) && !o.trk.arrived && prog(o)>=1){ o.trk.arrived = true; changed = true; arrivalNotify(o); } });
+  if(changed){ save(); const ae = document.activeElement; if(ae && (ae.tagName==='INPUT'||ae.tagName==='TEXTAREA')){ const top=document.querySelector('.top'); if(top) top.outerHTML = topbar(); } else render(); }
+  document.querySelectorAll('[data-trk]').forEach(updateMap);
+  document.querySelectorAll('[data-fleet]').forEach(updateFleet);
+  document.querySelectorAll('[data-trk-eta]').forEach(el=>{ const o=O(el.dataset.trkEta); if(o&&o.trk){ const p=prog(o); el.textContent = p>=1? t('arrived') : `${Math.max(1,Math.ceil(o.trk.min*(1-p)))} ${t('minutes')}`; } });
+}
+setInterval(tick, 250);
+
 /* ================= actions ================= */
 const num = v => parseInt(String(v).replace(/\D/g,''),10) || 0;
 function go(role, screen){ S.nav[role] = screen; }
@@ -789,8 +903,8 @@ function act(a, el){
   case 's-confirm': { const o=O(v); advance(STEP_MIN.confirmed); setOrder(o,'confirmed'); notify('buyer', (S.lang==='fr'?`${SELLERS[o.sid].name} a confirmé votre commande ${o.id}.`:`${SELLERS[o.sid].name} confirmed your order ${o.id}.`), 'sms'); break; }
   case 's-decline': { const o=O(v); advance(10); setOrder(o,'cancelled'); P(o.pid).status='live'; notify('buyer', S.lang==='fr'?`Commande ${o.id} annulée. ${fcfa(o.price+o.fee)} remboursés sur votre compte.`:`Order ${o.id} cancelled. ${fcfa(o.price+o.fee)} refunded to your account.`, 'sms'); break; }
   case 's-ready': { const o=O(v); advance(STEP_MIN.ready); setOrder(o,'ready'); notify('rider', (S.lang==='fr'?'Nouvelle course : ':'New job: ')+`${SELLERS[o.sid].zone} → ${o.zone} · ${fcfa(o.fee)}`); break; }
-  case 's-pickup': { const o=O(v); const c = document.getElementById('pk-code').value.trim(); if(c!==o.pickup){ ui.err=true; break; } advance(STEP_MIN.picked); setOrder(o,'picked');
-    notify('buyer', S.lang==='fr'?`Votre colis ${o.id} est en route. Code de livraison : ${o.code}. Ne le donnez qu’après avoir vérifié l’article.`:`Your parcel ${o.id} is on its way. Delivery code: ${o.code}. Only give it after checking the item.`, 'sms'); notify('rider', S.lang==='fr'?'Colis récupéré. Direction le client.':'Parcel collected. Head to the buyer.'); break; }
+  case 's-pickup': { const o=O(v); const c = document.getElementById('pk-code').value.trim(); if(c!==o.pickup){ ui.err=true; break; } advance(STEP_MIN.picked); setOrder(o,'picked'); startTrip(o,'toBuyer');
+    notify('buyer', S.lang==='fr'?`Votre colis ${o.id} est en route. Code de livraison : ${o.code}. Ne le donnez qu’après avoir vérifié l’article. Suivi : grendi.cm/t/${o.id.replace('GR-','')}`:`Your parcel ${o.id} is on its way. Delivery code: ${o.code}. Only give it after checking the item. Track: grendi.cm/t/${o.id.replace('GR-','')}`, 'sms'); notify('rider', S.lang==='fr'?'Colis récupéré. Direction le client.':'Parcel collected. Head to the buyer.'); break; }
   case 'edit-open': ui.overlay = {type:'edit', pid:v}; break;
   case 'edit-save': { const p=P(v); const np = num(document.getElementById('edit-price').value); if(np) p.price = np; ui.overlay=null; ui.toast={text:(S.lang==='fr'?'Prix mis à jour : ':'Price updated: ')+fcfa(p.price)}; break; }
   case 'ls': { const d = ui.listing; captureListing(); if(el.dataset.k==='neg') d.neg = !(d.neg!==false); else d[el.dataset.k] = v; break; }
@@ -801,7 +915,7 @@ function act(a, el){
   // rider
   case 'online': S.rider.online = !S.rider.online; break;
   case 'nodata': S.rider.noData = !S.rider.noData; break;
-  case 'r-accept': { const o=O(v); advance(STEP_MIN.assigned); setOrder(o,'assigned'); o.rider = RIDER.name; go('rider',{s:'job', id:v}); notify('seller', S.lang==='fr'?`${RIDER.name} arrive pour ${o.id}. Demandez-lui son code.`:`${RIDER.name} is coming for ${o.id}. Ask for his code.`); notify('buyer', S.lang==='fr'?`Livreur trouvé pour ${o.id} : ${RIDER.name}.`:`Rider found for ${o.id}: ${RIDER.name}.`); break; }
+  case 'r-accept': { const o=O(v); advance(STEP_MIN.assigned); setOrder(o,'assigned'); o.rider = RIDER.name; startTrip(o,'toSeller'); go('rider',{s:'job', id:v}); notify('seller', S.lang==='fr'?`${RIDER.name} arrive pour ${o.id}. Demandez-lui son code.`:`${RIDER.name} is coming for ${o.id}. Ask for his code.`); notify('buyer', S.lang==='fr'?`Livreur trouvé pour ${o.id} : ${RIDER.name}.`:`Rider found for ${o.id}: ${RIDER.name}.`); break; }
   case 'r-deliver': { const o=O(v); const c = document.getElementById('dl-code').value.trim(); if(c!==o.code){ ui.err=true; break; } deliver(o); break; }
   case 'sms-open': ui.overlay = {type:'sms', oid:v}; ui.input.smsCode=''; break;
   case 'sms-go': { const o=O(v); const c = document.getElementById('sms-code').value.trim(); ui.overlay=null; if(c!==o.code){ ui.err=true; break; } deliver(o); ui.toast={text:'SMS → 8080 ✓', kind:'sms'}; break; }
@@ -815,6 +929,7 @@ function act(a, el){
   case 'lst': { const p=P(v); p.status = el.dataset.k==='live'?'live':'rejected'; ui.adminFlash = `${L(p.name)} · ${t(p.status==='live'?'approved':'rejected')}`; if(p.status==='rejected') S.products = S.products.filter(x=>x.id!==v); notify('seller', `${L(p.name)} · ${t(el.dataset.k==='live'?'live':'rejected')}`); break; }
   case 'disp': { const d=S.disputes.find(x=>x.id===v); d.status='resolved'; d.result=el.dataset.k; const o=O(d.oid); setOrder(o, el.dataset.k==='refunded'?'refused':'completed'); ui.adminFlash = `${o.id} · ${t(el.dataset.k)}`; break; }
   case 'set-cod': S.settings.cod = !S.settings.cod; break;
+  case 'trk-skip': { const o=O(v); if(o && o.trk) o.trk.t0 = Date.now() - o.trk.dur; tick(); return; }
   case 'switch-shop': S.sess.seller = v; S.login.seller.acct = v; break;
   default: return;
   }

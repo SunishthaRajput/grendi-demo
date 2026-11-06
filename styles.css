@@ -316,3 +316,35 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 .th .ph-fb svg{width:22px;height:22px;margin:0}
 .credit{font-size:11.5px;color:var(--mut)}
 .credit a{color:inherit}
+
+/* live tracking map */
+:root{--map-land:#EEF1EA;--map-water:#BFDCEB;--map-park:#D7E8D2}
+.lmap{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid}
+.lmap svg{display:block;width:100%;height:auto;aspect-ratio:340/210}
+.lmap .rd-o line{stroke:#D5DBD6;stroke-width:8;stroke-linecap:round}
+.lmap .rd line{stroke:#fff;stroke-width:5.5;stroke-linecap:round}
+.lmap .lbl text{font:600 8px/1 var(--body);fill:#6b7a72;paint-order:stroke;stroke:var(--map-land);stroke-width:3px}
+.lmap .riv{font:italic 600 8px var(--body);fill:#6f9bb4}
+.lmap .rt{fill:none;stroke:var(--g2);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.lmap .rt-done{fill:none;stroke:#9aa8a1;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 6}
+.lmap .pin-t{font:800 9px/1 var(--body);fill:#fff}
+.lmap .halo{fill:var(--g2);opacity:.25;transform-box:fill-box;transform-origin:center;animation:halo 1.6s ease-out infinite}
+.lmap .radar{fill:var(--g2);opacity:.15;transform-box:fill-box;transform-origin:center;animation:halo 2.2s ease-out infinite}
+.lmap .ghost{animation:drift 3.5s ease-in-out infinite alternate}
+.lmap .ghost.g1{animation-duration:4.2s}.lmap .ghost.g2{animation-duration:3s}
+.lmap .fl-t{font:700 7.5px var(--body);fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:2.5px}
+.lmap .fl-t.me{fill:var(--g)}
+@keyframes halo{from{transform:scale(.6);opacity:.45}to{transform:scale(1.6);opacity:0}}
+@keyframes drift{to{translate:6px -5px}}
+.trk-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 12px 8px}
+.trk-bar{display:grid;grid-template-columns:1fr;gap:8px;padding:10px 12px 12px}
+.trk-bar .btn{justify-self:start}
+.eta{font:800 15px/1.2 var(--disp)}
+.pbar{height:6px;border-radius:3px;background:var(--soft);overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--g2);transition:width .25s linear}
+.gps{width:8px;height:8px;border-radius:50%;background:var(--g2);display:inline-block;box-shadow:0 0 0 0 rgba(14,138,99,.6);animation:gps 1.4s infinite}
+@keyframes gps{70%{box-shadow:0 0 0 7px rgba(14,138,99,0)}100%{box-shadow:0 0 0 0 rgba(14,138,99,0)}}
+.lmap.big{max-width:760px}
+[hidden]{display:none!important}
+.lmap.big .fl-t{font-size:6px}
+.lmap.big .lbl text{font-size:7px}
