@@ -68,11 +68,13 @@ fr:{
   arrivedSeller:'est arrivé à votre boutique. Demandez-lui son code.', arrivedBuyer:'est arrivé ! Vérifiez l’article, puis donnez votre code.', arrivedRiderS:'Vous êtes arrivé chez le vendeur. Montrez votre code.', arrivedRiderB:'Vous êtes arrivé chez le client. Demandez son code.',
   skip:'Avancer jusqu’à l’arrivée', lightMap:'Carte légère (moins de 15 Ko) : fonctionne même en 2G.', gpsLive:'GPS en direct', smsPos:'Sans données : position envoyée par SMS toutes les 2 min',
   liveMap:'Carte en direct', fleet:'Flotte en direct', idle:'Disponible', eta:'Arrivée', trackLink:'Suivi', shop:'Vendeur', you:'Vous',
+  relayPaid:'Frais point relais : {b} + {p} % du prix de l’article. Versés au commerçant seulement quand vous retirez votre colis.', relayFormula:'Votre gain par colis = {b} + {p} % de la valeur de l’article. Il est bloqué tant que le colis est en dépôt et versé sur MoMo dès que le client le retire avec son code.',
+  relayDelFee:'Livraison jusqu’au point relais', relayShopFee:'Frais point relais', relayFeeHow:'{b} + {p} % × {v}', pendingPickup:'En attente de retrait', heldTillPickup:'bloqué jusqu’au retrait', relayBase:'Frais fixe point relais par colis (FCFA)', relayPct:'Part de la valeur de l’article pour le point relais (%)', relayExample:'Exemple : t-shirt à 5 000 FCFA → {b} + {p} % × 5 000 = {x}', pickupDelL:'Livraison point relais', shopFeeCol:'Frais point relais', relayAtShopPaid:'Le livreur est payé dès que le colis est au point relais.',
   relay:'Point relais', relayHero:'Gagnez de l’argent en gardant des colis dans votre boutique.', chooseShop:'Choisissez votre boutique partenaire',
   g1:'Choisir un article, discuter ou faire une offre, payer par MoMo, choisir domicile ou point relais', g3:'Accepter la course : le chat avec le client s’ouvre', g5:'Livrer : code du client à domicile, ou dépôt au point relais', g6:'Remettre le colis contre le code de retrait du client', g6h:'Seulement pour un retrait en point relais', g7:'Valider la commande ou signaler un problème (48 h)', g8:'Voir le paiement versé, les litiges, les points relais et les réglages',
   total:'Durée totale', lg1:'Le vendeur est payé quand l’acheteur valide, ou 48 h après la livraison sans réponse', lg2:'Chat livreur–client ouvert seulement pendant la livraison',
   st_atshop:'Au point relais · prêt à retirer', st_delivered:'Livrée · en attente de validation', st_completed:'Validée · vendeur payé', st_disputed:'Problème signalé · paiement gelé', st_refunded:'Remboursée à l’acheteur',
-  deliveryMode:'Mode de livraison', homeDel:'Livraison à domicile', homeDelS:'Le livreur vous appelle et vous remet le colis en main propre.', relayDel:'Retrait en point relais', relayDelS:'Récupérez votre colis quand vous voulez, avec un code, dans une boutique partenaire près de chez vous.', chooseRelay:'Choisissez le point relais', openH:'Ouvert', relayPaid:'Le commerçant est rémunéré sur les frais de livraison, sans frais en plus pour vous.',
+  deliveryMode:'Mode de livraison', homeDel:'Livraison à domicile', homeDelS:'Le livreur vous appelle et vous remet le colis en main propre.', relayDel:'Retrait en point relais', relayDelS:'Récupérez votre colis quand vous voulez, avec un code, dans une boutique partenaire près de chez vous.', chooseRelay:'Choisissez le point relais', openH:'Ouvert',
   toRelay:'Livrez au point relais', dropBtn:'Colis déposé au point relais', relayWillGet:'Votre colis sera déposé chez', relayCodeSoon:'Vous recevrez un code de retrait par SMS dès le dépôt.', pickupCodeT:'Votre code de retrait', pickupCodeH:'Montrez ce code au commerçant pour récupérer votre colis.',
   validateT:'Votre commande est livrée. Tout est en ordre ?', validateBtn:'Valider la commande', reportBtn:'Signaler un problème', autoRelease:'Sans réponse de votre part, le vendeur sera payé automatiquement', sim48:'Simuler 48 h sans réponse', validated:'Commande validée. Le vendeur a été payé.', autoReleased:'Validée automatiquement après 48 h sans réponse. Le vendeur a été payé.', frozen:'Problème signalé : le paiement du vendeur est gelé jusqu’à la décision de l’équipe Grendi.',
   reportT:'Signaler un problème', describe:'Décrivez le problème', describePh:'Ex. : il y a une tache sur la manche gauche…', addPhoto:'Ajouter une photo', sendReport:'Envoyer le signalement', rMissing:'Article manquant',
@@ -80,7 +82,7 @@ fr:{
   riderChat:'Écrire au livreur', buyerChat:'Écrire au client', chatOpened:'Discussion ouverte avec le livreur. Elle se fermera automatiquement après la livraison.', chatClosed:'Discussion fermée : la livraison est terminée.', rq1:'Je descends dans 2 min', rq2:'Je suis au portail bleu', rq3:'Appelez-moi en arrivant', dq1:'Je suis en route', dq2:'Je suis devant, où êtes-vous ?', dq3:'J’arrive dans 5 min', riderAuto:'D’accord, bien noté 👍', chatOpen:'Ouverte', chatShut:'Fermée',
   location:'Localisation', changeLoc:'Changer de localisation', city:'Ville', cityOnly:'Pour le lancement, on achète et on vend dans sa ville. Articles affichés :', otherCity:'Cet article est vendu à', otherCityS:'Changez votre localisation pour l’acheter.', locSaved:'Localisation mise à jour :', workCity:'Ville de travail', jobsOther:'course(s) disponible(s) à', switchCity:'Passer à',
   reviews:'Avis clients', writeReview:'Votre note et votre avis', reviewPh:'Racontez votre expérience : qualité, taille, délai de livraison…', publishReview:'Publier l’avis', noReviews:'Pas encore d’avis.', yourReview:'Votre avis', reviewsN:'avis',
-  parcels:'Colis', toReceive:'À recevoir', inStore:'En dépôt', handedOver:'Remis', clientCode:'Code de retrait du client', handBtn:'Remettre le colis', relayEarn:'Gains ce mois', relayFormula:'Votre gain par colis = frais de livraison à domicile − frais de livraison en point relais. Versé sur MoMo avec les paiements Grendi, sans autre système de paiement.', relayHanded:'Colis remis au client.', newParcel:'Colis déposé chez vous :', expectedParcel:'Colis attendu :', aRelays:'Points relais', heldNow:'Colis en dépôt', homeFeeL:'Domicile', relayFeeL:'Point relais', shopEarnL:'Gain boutique', validWin:'Délai avant paiement automatique (heures)', toRelayL:'Au point relais', kpiAwait:'À valider par l’acheteur', yourGain:'Votre gain', perParcel:'par colis', perZone:'par quartier', riderGets:'Livreur', today:'Aujourd’hui'
+  parcels:'Colis', toReceive:'À recevoir', inStore:'En dépôt', handedOver:'Remis', clientCode:'Code de retrait du client', handBtn:'Remettre le colis', relayEarn:'Gains ce mois', relayHanded:'Colis remis au client.', newParcel:'Colis déposé chez vous :', expectedParcel:'Colis attendu :', aRelays:'Points relais', heldNow:'Colis en dépôt', homeFeeL:'Domicile', relayFeeL:'Point relais', shopEarnL:'Gain boutique', validWin:'Délai avant paiement automatique (heures)', toRelayL:'Au point relais', kpiAwait:'À valider par l’acheteur', yourGain:'Votre gain', perParcel:'par colis', perZone:'par quartier', riderGets:'Livreur', today:'Aujourd’hui'
 },
 en:{
   frozenSt:'Frozen', awaitingS:'To validate',
@@ -139,11 +141,13 @@ en:{
   arrivedSeller:'has arrived at your shop. Ask for his code.', arrivedBuyer:'has arrived! Check the item, then give your code.', arrivedRiderS:'You’ve arrived at the seller. Show your code.', arrivedRiderB:'You’ve arrived at the buyer. Ask for their code.',
   skip:'Skip to arrival', lightMap:'Light map (under 15 KB): works even on 2G.', gpsLive:'Live GPS', smsPos:'No data: position sent by SMS every 2 min',
   liveMap:'Live map', fleet:'Live fleet', idle:'Available', eta:'Arrival', trackLink:'Track', shop:'Seller', you:'You',
+  relayPaid:'Pickup shop fee: {b} + {p}% of the item price. Paid to the shopkeeper only when you collect your parcel.', relayFormula:'Your earnings per parcel = {b} + {p}% of the item’s value. Held while the parcel is in your shop, paid to MoMo as soon as the buyer collects it with their code.',
+  relayDelFee:'Delivery to pickup shop', relayShopFee:'Pickup shop fee', relayFeeHow:'{b} + {p}% × {v}', pendingPickup:'Waiting for collection', heldTillPickup:'held until collected', relayBase:'Pickup shop fixed fee per parcel (FCFA)', relayPct:'Pickup shop share of item value (%)', relayExample:'Example: 5,000 FCFA T-shirt → {b} + {p}% × 5,000 = {x}', pickupDelL:'Pickup-shop delivery', shopFeeCol:'Pickup shop fee', relayAtShopPaid:'The rider is paid as soon as the parcel is at the pickup shop.',
   relay:'Pickup shop', relayHero:'Earn money by holding parcels in your shop.', chooseShop:'Choose your partner shop',
   g1:'Pick an item, chat or make an offer, pay by MoMo, choose home or pickup shop', g3:'Accept the job: the chat with the buyer opens', g5:'Deliver: buyer’s code at home, or drop at the pickup shop', g6:'Hand over the parcel against the buyer’s pickup code', g6h:'Only for pickup-shop orders', g7:'Validate the order or report an issue (48 h)', g8:'See the payout, disputes, pickup shops and settings',
   total:'Total time', lg1:'The seller is paid when the buyer validates, or 48 h after delivery with no reply', lg2:'Rider–buyer chat is open only during delivery',
   st_atshop:'At pickup shop · ready to collect', st_delivered:'Delivered · waiting for validation', st_completed:'Validated · seller paid', st_disputed:'Issue reported · payment frozen', st_refunded:'Refunded to buyer',
-  deliveryMode:'Delivery method', homeDel:'Home delivery', homeDelS:'The rider calls you and hands you the parcel.', relayDel:'Pickup shop', relayDelS:'Collect your parcel whenever suits you, with a code, at a partner shop near you.', chooseRelay:'Choose the pickup shop', openH:'Open', relayPaid:'The shop is paid out of the delivery fee, at no extra cost to you.',
+  deliveryMode:'Delivery method', homeDel:'Home delivery', homeDelS:'The rider calls you and hands you the parcel.', relayDel:'Pickup shop', relayDelS:'Collect your parcel whenever suits you, with a code, at a partner shop near you.', chooseRelay:'Choose the pickup shop', openH:'Open',
   toRelay:'Deliver to the pickup shop', dropBtn:'Parcel dropped at pickup shop', relayWillGet:'Your parcel will be dropped at', relayCodeSoon:'You’ll get a pickup code by SMS as soon as it’s dropped.', pickupCodeT:'Your pickup code', pickupCodeH:'Show this code to the shopkeeper to collect your parcel.',
   validateT:'Your order has been delivered. Is everything OK?', validateBtn:'Validate order', reportBtn:'Report an issue', autoRelease:'If you don’t reply, the seller is paid automatically', sim48:'Simulate 48 h with no reply', validated:'Order validated. The seller has been paid.', autoReleased:'Validated automatically after 48 h with no reply. The seller has been paid.', frozen:'Issue reported: the seller’s payment is frozen until the Grendi team decides.',
   reportT:'Report an issue', describe:'Describe the problem', describePh:'E.g. there’s a stain on the left sleeve…', addPhoto:'Add a photo', sendReport:'Send report', rMissing:'Item missing',
@@ -151,7 +155,7 @@ en:{
   riderChat:'Message the rider', buyerChat:'Message the buyer', chatOpened:'Chat open with the rider. It closes automatically after delivery.', chatClosed:'Chat closed: delivery is complete.', rq1:'Coming down in 2 min', rq2:'I’m at the blue gate', rq3:'Call me when you arrive', dq1:'I’m on my way', dq2:'I’m outside, where are you?', dq3:'Arriving in 5 min', riderAuto:'OK, noted 👍', chatOpen:'Open', chatShut:'Closed',
   location:'Location', changeLoc:'Change location', city:'City', cityOnly:'For launch, people buy and sell within their own city. Showing items in:', otherCity:'This item is sold in', otherCityS:'Change your location to buy it.', locSaved:'Location updated:', workCity:'Working city', jobsOther:'job(s) available in', switchCity:'Switch to',
   reviews:'Customer reviews', writeReview:'Your rating and review', reviewPh:'Tell others about it: quality, fit, delivery time…', publishReview:'Post review', noReviews:'No reviews yet.', yourReview:'Your review', reviewsN:'reviews',
-  parcels:'Parcels', toReceive:'Coming in', inStore:'In the shop', handedOver:'Handed over', clientCode:'Buyer’s pickup code', handBtn:'Hand over parcel', relayEarn:'Earned this month', relayFormula:'Your earnings per parcel = home delivery fee − pickup-shop delivery fee. Paid to MoMo with Grendi’s other payouts, no separate payment system.', relayHanded:'Parcel handed to the buyer.', newParcel:'Parcel dropped at your shop:', expectedParcel:'Parcel on its way:', aRelays:'Pickup shops', heldNow:'Parcels held', homeFeeL:'Home', relayFeeL:'Pickup shop', shopEarnL:'Shop earns', validWin:'Time before automatic payout (hours)', toRelayL:'To pickup shop', kpiAwait:'Waiting for buyer validation', yourGain:'You earn', perParcel:'per parcel', perZone:'by neighbourhood', riderGets:'Rider', today:'Today'
+  parcels:'Parcels', toReceive:'Coming in', inStore:'In the shop', handedOver:'Handed over', clientCode:'Buyer’s pickup code', handBtn:'Hand over parcel', relayEarn:'Earned this month', relayHanded:'Parcel handed to the buyer.', newParcel:'Parcel dropped at your shop:', expectedParcel:'Parcel on its way:', aRelays:'Pickup shops', heldNow:'Parcels held', homeFeeL:'Home', relayFeeL:'Pickup shop', shopEarnL:'Shop earns', validWin:'Time before automatic payout (hours)', toRelayL:'To pickup shop', kpiAwait:'Waiting for buyer validation', yourGain:'You earn', perParcel:'per parcel', perZone:'by neighbourhood', riderGets:'Rider', today:'Today'
 }};
 
 /* ================= data ================= */
@@ -232,7 +236,7 @@ const RANK = {placed:1, confirmed:2, ready:3, assigned:4, picked:5, atshop:6, de
 const STEP_MIN = {confirmed:18, ready:24, assigned:4, picked:16, delivered:31, atshop:26, collect:95, completed:12};
 
 /* ================= state ================= */
-const KEY = 'grendi-demo-v4';
+const KEY = 'grendi-demo-v5';
 const START = 9*60 + 5; // Monday 09:05
 const SEED_REVIEWS = [
   {sid:'s1', author:'Nadège K.', stars:5, t:START-60, text:{fr:'Robe reçue en moins de 2 h, exactement comme sur les photos. Merci !', en:'Dress arrived in under 2 hours, exactly like the photos. Thanks!'}},
@@ -272,9 +276,9 @@ function seed(){
       {id:'a2', type:'rider', name:'Eric Nana', owner:'Eric Nana', zone:'Deïdo', docs:['CNI','Permis A','Photo moto'], status:'pending', t:START-20}
     ],
     disputes:[{id:'d1', oid:'GR-1036', reason:'rNot', claim:{fr:'« La robe a une déchirure sous le bras, pas mentionnée dans l’annonce. »', en:'“The dress has a tear under the arm that wasn’t in the listing.”'}, status:'open'}],
-    settings:{commission:10, confirmH:12, validH:48,
+    settings:{commission:10, confirmH:12, validH:48, relayBase:200, relayPct:2,
       fees:{Akwa:700, Bonapriso:800, 'Deïdo':800, Bonamoussadi:1000, Makepe:1000, 'Bonabéri':1500, Logbaba:1200, Ndokotti:1000, Bastos:900, 'Etoa-Meki':900, Mokolo:800, 'Centre-ville':700, Essos:900, 'Mvog-Mbi':800, 'Biyem-Assi':1200, Ngousso:1100},
-      sfees:{Akwa:400, Bonapriso:500, 'Deïdo':500, Bonamoussadi:600, Makepe:600, 'Bonabéri':1000, Logbaba:800, Ndokotti:600, Bastos:550, 'Etoa-Meki':550, Mokolo:500, 'Centre-ville':400, Essos:550, 'Mvog-Mbi':500, 'Biyem-Assi':800, Ngousso:700}},
+      sfees:{Akwa:400, Bonapriso:500, 'Deïdo':500, Bonamoussadi:500, Makepe:600, 'Bonabéri':1000, Logbaba:800, Ndokotti:600, Bastos:550, 'Etoa-Meki':550, Mokolo:500, 'Centre-ville':400, Essos:550, 'Mvog-Mbi':500, 'Biyem-Assi':800, Ngousso:700}},
     rider:{online:true, earnedToday:4300, trips:5, noData:false, city:'Douala'},
     dataSaver:false, notes:{buyer:0, seller:0, rider:0, relay:0, admin:0}, rated:{}, likes:{}, adminSeen:false
   };
@@ -309,6 +313,9 @@ const img = (id, w=640) => U(id)(S.dataSaver ? Math.round(w/2.6) : w);
 const code4 = () => String(1000 + Math.floor(Math.random()*9000));
 const advance = m => { S.clock += m; };
 const fee = zone => S.settings.fees[zone] ?? 1000;
+const shopFee = price => Math.round((S.settings.relayBase ?? 200) + price*(S.settings.relayPct ?? 2)/100);
+const rt = k => t(k).replace('{b}', fcfa(S.settings.relayBase ?? 200)).replace('{p}', String(S.settings.relayPct ?? 2).replace('.', S.lang==='fr'?',':'.')).replace('{x}', fcfa(shopFee(5000)));
+const tot = o => o.price + o.fee + (o.relayFee||0);
 const sfee = zone => S.settings.sfees[zone] ?? Math.max(0, fee(zone)-300);
 const sellerRating = sid => { const r = S.reviews.filter(x=>x.sid===sid); return r.length ? (r.reduce((a,x)=>a+x.stars,0)/r.length) : SELLERS[sid].rating; };
 const stars = n => '★'.repeat(n) + '☆'.repeat(5-n);
@@ -416,7 +423,7 @@ function phone(inner){
 /* ================= login ================= */
 function loginScreen(role){
   const st = S.login[role];
-  const hero = {buyer:[t('welcome'),t('welcomeS')], seller:[t('sellerHero'), t('welcomeS')], rider:[t('riderHero'), t('onlineS')], relay:[t('relayHero'), t('relayFormula')]}[role];
+  const hero = {buyer:[t('welcome'),t('welcomeS')], seller:[t('sellerHero'), t('welcomeS')], rider:[t('riderHero'), t('onlineS')], relay:[t('relayHero'), rt('relayFormula')]}[role];
   const num = role==='buyer' ? BUYER.phone : role==='rider' ? RIDER.phone : role==='relay' ? RELAYS[st.acct].phone : SELLERS[st.acct].phone;
   const langSeg = `<div class="field"><label>${t('language')}</label><div class="seg"><button data-a="lang" data-v="fr" aria-pressed="${S.lang==='fr'}">Français</button><button data-a="lang" data-v="en" aria-pressed="${S.lang==='en'}">English</button></div></div>`;
   let box;
@@ -516,9 +523,9 @@ function bCheckout(id){
   const rels = relaysIn(city, z); const rel = RELAYS[ui.input.relay] && cityOf(RELAYS[ui.input.relay].zone)===city ? RELAYS[ui.input.relay] : rels[0];
   const f = fee(z);
   const pm = (v, label, sw) => `<button class="li" data-a="pay" data-v="${v}" style="${pay===v?'border-color:var(--g);background:var(--g-soft)':''}"><span class="av" style="background:${sw};color:${v==='momo'?'#111':'#fff'};font-size:11px">${v==='momo'?'MTN':'OM'}</span><span class="mid"><span class="nm">${label}</span><span class="xs mut">+237 ${BUYER.phone}</span></span>${pay===v?ic('check'):''}</button>`;
-  const md = (v, title, sub, icn) => `<button class="li" data-a="mode" data-v="${v}" style="align-items:flex-start;${mode===v?'border-color:var(--g);background:var(--g-soft)':''}"><span class="av" style="background:${mode===v?'var(--g)':'var(--soft)'};color:${mode===v?'#fff':'var(--mut)'}">${ic(icn)}</span><span class="mid"><span class="nm">${title}</span><span class="xs mut" style="white-space:normal">${sub}</span></span><b class="sm">${fcfa(v==='home'?f:fee(rel.zone))}</b></button>`;
-  const relayList = mode==='relay' ? `<div class="field"><label>${t('chooseRelay')}</label><div style="display:grid;gap:8px">${rels.map(r=>`<button class="li" data-a="relay-pick" data-v="${r.id}" style="${rel.id===r.id?'border-color:#B4236F;background:#FBE9F2':''}"><span class="av" style="background:${r.color}">${ic('bag')}</span><span class="mid"><span class="nm">${esc(r.name)}</span><span class="xs mut" style="white-space:normal">${esc(L(r.addr))} · ${t('openH')} ${r.hours}</span></span>${rel.id===r.id?ic('check'):''}</button>`).join('')}</div><span class="xs mut">${t('relayPaid')}</span></div>` : '';
-  const dFee = mode==='home' ? f : fee(rel.zone);
+  const md = (v, title, sub, icn) => `<button class="li" data-a="mode" data-v="${v}" style="align-items:flex-start;${mode===v?'border-color:var(--g);background:var(--g-soft)':''}"><span class="av" style="background:${mode===v?'var(--g)':'var(--soft)'};color:${mode===v?'#fff':'var(--mut)'}">${ic(icn)}</span><span class="mid"><span class="nm">${title}</span><span class="xs mut" style="white-space:normal">${sub}</span></span><b class="sm">${fcfa(v==='home'?f:sfee(rel.zone)+shopFee(price))}</b></button>`;
+  const relayList = mode==='relay' ? `<div class="field"><label>${t('chooseRelay')}</label><div style="display:grid;gap:8px">${rels.map(r=>`<button class="li" data-a="relay-pick" data-v="${r.id}" style="${rel.id===r.id?'border-color:#B4236F;background:#FBE9F2':''}"><span class="av" style="background:${r.color}">${ic('bag')}</span><span class="mid"><span class="nm">${esc(r.name)}</span><span class="xs mut" style="white-space:normal">${esc(L(r.addr))} · ${t('openH')} ${r.hours}</span></span>${rel.id===r.id?ic('check'):''}</button>`).join('')}</div><span class="xs mut">${rt('relayPaid')}</span></div>` : '';
+  const dFee = mode==='home' ? f : sfee(rel.zone); const sFee = mode==='relay' ? shopFee(price) : 0;
   return `<div class="body"><div class="ah"><button class="ib" data-a="back">${ic('back')}</button><h2>${t('checkout')}</h2></div><div class="pad">
     <div class="li"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${SELLERS[p.sid].name} · ${t('size')} ${esc(ui.input.size||p.sizes[0])}</span></span><span class="b">${fcfa(price)}</span></div>
     <div class="field"><label>${t('deliveryMode')} · ${city}</label><div style="display:grid;gap:8px">${md('home',t('homeDel'),t('homeDelS'),'home')}${md('relay',t('relayDel'),t('relayDelS'),'bag')}</div></div>
@@ -528,9 +535,9 @@ function bCheckout(id){
       <div class="field"><label>${t('landmark')}</label><input class="inp" id="landmark" placeholder="${t('landmarkPh')}" value="${esc(ui.input.landmark ?? (S.lang==='fr'?'Carrefour '+z+', derrière la pharmacie':z+' junction, behind the pharmacy'))}"></div>
       <div class="kv"><span>${t('phone')}</span><span>+237 ${BUYER.phone}</span></div></div>` : ''}
     <div class="field"><label>${t('payWith')}</label><div style="display:grid;gap:8px">${pm('momo',t('momo'),'var(--mtn)')}${pm('om',t('om'),'var(--orange)')}</div></div>
-    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(price)}</span></div><div class="kv"><span>${t('delivery')} (${mode==='home'?z:t('relayFeeL')})</span><span>${fcfa(dFee)}</span></div><div class="divider"></div><div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(price+dFee)}</span></div></div>
+    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(price)}</span></div><div class="kv"><span>${mode==='home'?t('delivery')+' ('+z+')':t('relayDelFee')}</span><span>${fcfa(dFee)}</span></div>${mode==='relay'?`<div class="kv"><span>${t('relayShopFee')}<br><span class="xs">${rt('relayFeeHow').replace('{v}', fcfa(price))}</span></span><span>${fcfa(sFee)}</span></div>`:''}<div class="divider"></div><div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(price+dFee+sFee)}</span></div></div>
     <div class="note n-g">${ic('shield')}<span>${t('lg1')}.</span></div>
-    <button class="btn" data-a="pay-go" data-v="${id}" data-relay="${rel.id}">${t('pay')+' '+fcfa(price+dFee)}</button>
+    <button class="btn" data-a="pay-go" data-v="${id}" data-relay="${rel.id}">${t('pay')+' '+fcfa(price+dFee+sFee)}</button>
   </div></div>`;
 }
 function bOrders(){
@@ -540,7 +547,7 @@ function bOrders(){
 function orderRow(o, screen, extra=''){
   const p = P(o.pid);
   const chip = RANK[o.status]===0 ? 'c-r' : o.status==='completed' ? 'c-g' : o.status==='disputed' ? 'c-r' : 'c-y';
-  return `<button class="li" data-a="go" data-s="${screen}" data-v="${o.id}"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${o.id} · ${fcfa(o.price+o.fee)}${extra}</span><span><span class="chip ${chip}">${t('st_'+o.status)}</span></span></span></button>`;
+  return `<button class="li" data-a="go" data-s="${screen}" data-v="${o.id}"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${o.id} · ${fcfa(tot(o))}${extra}</span><span><span class="chip ${chip}">${t('st_'+o.status)}</span></span></span></button>`;
 }
 const FLOW = o => o.mode==='relay' ? ['placed','confirmed','ready','assigned','picked','atshop','delivered','completed'] : ['placed','confirmed','ready','assigned','picked','delivered','completed'];
 function trackList(o){
@@ -585,8 +592,8 @@ function bOrder(id){
     ${rate}
     <div class="card">${trackList(o)}</div>
     <div class="li"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${s.name} · ${t('size')} ${esc(o.size)}</span></span></div>
-    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${t('delivery')} (${o.mode==='relay'?t('relayFeeL'):o.zone})</span><span>${fcfa(o.fee)}</span></div><div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(o.price+o.fee)}</span></div><div class="kv"><span>${t('payWith')}</span><span>${t(o.pay)}</span></div>
-    ${r>0 && r<8 ? `<div class="note n-g">${ic('shield')}<span>${t('heldBy')} : <b>${fcfa(o.price+o.fee)}</b></span></div>`:''}</div>
+    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${o.mode==='relay'?t('relayDelFee'):t('delivery')+' ('+o.zone+')'}</span><span>${fcfa(o.fee)}</span></div>${o.mode==='relay'?`<div class="kv"><span>${t('relayShopFee')}<br><span class="xs">${rt('relayFeeHow').replace('{v}', fcfa(o.price))}</span></span><span>${fcfa(o.relayFee)}</span></div>`:''}<div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(tot(o))}</span></div><div class="kv"><span>${t('payWith')}</span><span>${t(o.pay)}</span></div>
+    ${r>0 && r<8 ? `<div class="note n-g">${ic('shield')}<span>${t('heldBy')} : <b>${fcfa(tot(o))}</b></span></div>`:''}</div>
     <button class="btn sec" data-a="chat-open" data-v="${o.pid}|Aïcha">${ic('chat')}${t('chat')} · ${s.name}</button>
     ${S.rchats[o.id] && !S.rchats[o.id].open ? `<button class="btn sec" data-a="rchat-open" data-v="${o.id}">${ic('chat')}${t('riderChat')} · ${t('chatShut')}</button>` : ''}
   </div></div>`;
@@ -836,6 +843,7 @@ function rJob(id){
     body = `<div class="card"><span class="xs mut">${t('toRelay')}</span><div class="seller"><span class="av" style="background:${rel.color}">${ic('bag')}</span><div style="flex:1"><b>${esc(rel.name)}</b><div class="xs mut">${esc(L(rel.addr))} · ${rel.hours}</div></div><button class="ib" data-a="call" data-v="relay:${rel.id}">${ic('phone')}</button></div></div>
       <div class="note n-g">${ic('shield')}<span>${t(o.pay)} ✓ · ${t('heldBy')}</span></div>
       ${chatBtn}
+      <p class="xs mut">${t('relayAtShopPaid')}</p>
       <button class="btn" data-a="r-drop" data-v="${id}">${ic('bag')}${t('dropBtn')}</button>`;
   } else if(o.status==='picked'){
     body = `<div class="card"><span class="xs mut">${t('goBuyer')}</span><div class="seller"><span class="av" style="background:var(--blue)">${initials(o.buyer)}</span><div style="flex:1"><b>${o.buyer}</b><div class="xs mut">${o.zone} · ${esc(o.landmark)}</div></div><button class="ib" data-a="call" data-v="buyer">${ic('phone')}</button></div></div>
@@ -880,10 +888,10 @@ function rlHome(){
   const done = mine.filter(o=>RANK[o.status]>=7 || o.status==='disputed');
   const dOrd = demoOrder(); const other = dOrd && dOrd.mode==='relay' && dOrd.relay!==id && RANK[dOrd.status]>0 && RANK[dOrd.status]<7 ? RELAYS[dOrd.relay] : null;
   const sw = other ? `<div class="note n-y">${ic('bell')}<span style="flex:1">${dOrd.id} → <b>${esc(other.name)}</b></span><button class="btn sm" data-a="switch-relay" data-v="${other.id}">${S.lang==='fr'?'Ouvrir cette boutique':'Open this shop'}</button></div>` : '';
-  const row = (o, extra) => { const p=P(o.pid); return `<div class="card"><div class="li" style="border:0;padding:0"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${o.id} · ${esc(o.buyer)}</span><span class="xs mut">${esc(L(p.name))}</span><span><span class="chip ${o.status==='atshop'?'c-y':RANK[o.status]>=7?'c-g':'c-n'}">${t('st_'+o.status)}</span></span></span><b class="sm" style="color:#B4236F">+${fcfa(o.relayFee)}</b></div>${extra||''}</div>`; };
+  const row = (o, extra) => { const p=P(o.pid); return `<div class="card"><div class="li" style="border:0;padding:0"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${o.id} · ${esc(o.buyer)}</span><span class="xs mut">${esc(L(p.name))}</span><span><span class="chip ${o.status==='atshop'?'c-y':RANK[o.status]>=7?'c-g':'c-n'}">${t('st_'+o.status)}</span></span></span><span style="text-align:right"><b class="sm" style="color:#B4236F">+${fcfa(o.relayFee)}</b>${o.status==='atshop'||RANK[o.status]<6?`<br><span class="xs mut">${t('heldTillPickup')}</span>`:''}</span></div>${extra||''}</div>`; };
   return `<div class="body"><div class="ah"><span class="av" style="background:${r.color};width:38px;height:38px">${ic('bag')}</span><h2>${esc(r.name)}<br><span class="xs mut" style="font-family:var(--body);font-weight:500">${r.zone}, ${cityOf(r.zone)} · ${r.hours}</span></h2></div><div class="pad">${sw}
-    <div class="stats"><div class="stat"><span>${t('heldNow')}</span><b>${held.length}</b></div><div class="stat"><span>${t('relayEarn')}</span><b>${fcfa(S.relayEarn[id]||0)}</b></div></div>
-    <div class="note" style="background:#FBE9F2;color:#7a1748">${ic('coins')}<span>${t('relayFormula')}<br><b>${r.zone} : ${fcfa(fee(r.zone))} − ${fcfa(sfee(r.zone))} = ${fcfa(fee(r.zone)-sfee(r.zone))} ${t('perParcel')}</b></span></div>
+    <div class="stats"><div class="stat"><span>${t('pendingPickup')}</span><b>${fcfa(held.reduce((a,o)=>a+o.relayFee,0))}</b></div><div class="stat"><span>${t('relayEarn')}</span><b>${fcfa(S.relayEarn[id]||0)}</b></div></div>
+    <div class="note" style="background:#FBE9F2;color:#7a1748">${ic('coins')}<span>${rt('relayFormula')}<br><b>${rt('relayExample')}</b></span></div>
     <h3 style="font-size:16px">${t('inStore')} (${held.length})</h3>
     ${held.length ? held.map(o=>row(o, `<div class="field"><label>${t('clientCode')}</label><input class="inp" id="sc-${o.id}" inputmode="numeric" maxlength="4" placeholder="••••" style="font:800 22px/1 var(--disp);letter-spacing:.3em;text-align:center"></div>${ui.err===o.id?`<p class="xs" style="color:var(--red)">${t('wrongCode')}</p>`:''}<button class="btn" data-a="rl-hand" data-v="${o.id}">${t('handBtn')}</button>`)).join('') : `<p class="sm mut">${t('none')}</p>`}
     <h3 style="font-size:16px">${t('toReceive')} (${incoming.length})</h3>
@@ -905,12 +913,12 @@ function adminApp(){
 }
 function stChip(o){ const r=RANK[o.status]; return `<span class="chip ${r===0||o.status==='disputed'?'c-r':o.status==='completed'?'c-g':'c-y'}">${t('st_'+o.status)}</span>`; }
 function aRelays(){
-  const rows = Object.values(RELAYS).map(r=>{ const held = S.orders.filter(o=>o.relay===r.id && o.status==='atshop').length; return `<tr><td><b>${esc(r.name)}</b><br><span class="xs mut">${esc(r.owner)} · +237 ${r.phone}</span></td><td>${r.zone}, ${cityOf(r.zone)}</td><td>${r.hours}</td><td class="num">${held}</td><td class="num">${fcfa(fee(r.zone)-sfee(r.zone))}</td><td class="num">${fcfa(S.relayEarn[r.id]||0)}</td></tr>`; }).join('');
-  return `<h2>${t('aRelays')}</h2><p class="mut">${t('relayFormula')}</p><div class="tw"><table><thead><tr><th>${t('relay')}</th><th>${t('zoneL')}</th><th>${t('openH')}</th><th class="num">${t('heldNow')}</th><th class="num">${t('yourGain')} / ${t('perParcel')}</th><th class="num">${t('relayEarn')}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  const rows = Object.values(RELAYS).map(r=>{ const held = S.orders.filter(o=>o.relay===r.id && o.status==='atshop').length; return `<tr><td><b>${esc(r.name)}</b><br><span class="xs mut">${esc(r.owner)} · +237 ${r.phone}</span></td><td>${r.zone}, ${cityOf(r.zone)}</td><td>${r.hours}</td><td class="num">${held}</td><td class="num">${fcfa(S.orders.filter(o=>o.relay===r.id && o.status==='atshop').reduce((a,o)=>a+o.relayFee,0))}</td><td class="num">${fcfa(S.relayEarn[r.id]||0)}</td></tr>`; }).join('');
+  return `<h2>${t('aRelays')}</h2><p class="mut">${rt('relayFormula')}</p><div class="tw"><table><thead><tr><th>${t('relay')}</th><th>${t('zoneL')}</th><th>${t('openH')}</th><th class="num">${t('heldNow')}</th><th class="num">${t('pendingPickup')}</th><th class="num">${t('relayEarn')}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 function aOverview(){
   const today = S.orders; const gmv = today.reduce((a,o)=>a+(RANK[o.status]>0?o.price:0),0);
-  const held = today.filter(o=>RANK[o.status]>0&&o.status!=='completed').reduce((a,o)=>a+o.price+o.fee,0);
+  const held = today.filter(o=>RANK[o.status]>0&&o.status!=='completed').reduce((a,o)=>a+tot(o),0);
   const awaiting = today.filter(o=>o.status==='delivered'||o.status==='atshop').length;
   const fin = today.filter(o=>o.events.some(e=>e.s==='delivered')); const avg = fin.length ? fin.reduce((a,o)=>a+(o.events.find(e=>e.s==='delivered').t-o.events[0].t),0)/fin.length : 0;
   const feed = today.flatMap(o=>o.events.map(e=>({o,e}))).sort((a,b)=>b.e.t-a.e.t).slice(0,8);
@@ -918,11 +926,11 @@ function aOverview(){
     <div class="kpi"><span>${t('ordersToday')}</span><b>${today.length}</b></div><div class="kpi"><span>${t('gmv')}</span><b>${fcfa(gmv)}</b></div><div class="kpi"><span>${t('escrowHeld')}</span><b>${fcfa(held)}</b></div>
     <div class="kpi"><span>${t('kpiAwait')}</span><b>${awaiting}</b></div><div class="kpi"><span>${t('avgTime')}</span><b>${dur(avg)}</b></div><div class="kpi"><span>${t('openDisputes')}</span><b>${S.disputes.filter(d=>d.status==='open').length}</b></div></div>
     <h3>${t('liveFeed')}</h3><div class="tw"><table><thead><tr><th>${t('time')}</th><th>${t('order')}</th><th>${t('status')}</th><th>${t('sellerL')}</th><th class="num">${t('amount')}</th></tr></thead><tbody>
-    ${feed.map(({o,e})=>`<tr><td>${hmd(e.t)}</td><td><b>${o.id}</b>${o.demo?' <span class="chip c-b">demo</span>':''}</td><td>${t('st_'+e.s)}</td><td>${SELLERS[o.sid].name}</td><td class="num">${fcfa(o.price+o.fee)}</td></tr>`).join('')}</tbody></table></div>`;
+    ${feed.map(({o,e})=>`<tr><td>${hmd(e.t)}</td><td><b>${o.id}</b>${o.demo?' <span class="chip c-b">demo</span>':''}</td><td>${t('st_'+e.s)}</td><td>${SELLERS[o.sid].name}</td><td class="num">${fcfa(tot(o))}</td></tr>`).join('')}</tbody></table></div>`;
 }
 function aOrders(){
   return `<h2>${t('aOrders')}</h2><div class="tw"><table><thead><tr><th>${t('order')}</th><th>${t('item')}</th><th>${t('buyerL')}</th><th>${t('sellerL')}</th><th>${t('deliveryMode')}</th><th>${t('status')}</th><th class="num">${t('amount')}</th></tr></thead><tbody>
-  ${S.orders.slice().reverse().map(o=>`<tr><td><b>${o.id}</b><br><span class="xs mut">${hmd(o.events[0].t)}</span></td><td>${esc(L(P(o.pid).name))}</td><td>${esc(o.buyer)}<br><span class="xs mut">${o.zone}, ${cityOf(o.zone)}</span></td><td>${SELLERS[o.sid].name}</td><td>${o.mode==='relay'?esc(RELAYS[o.relay].name):t('homeDel')}</td><td>${stChip(o)}</td><td class="num">${fcfa(o.price+o.fee)}</td></tr>`).join('')}</tbody></table></div>`;
+  ${S.orders.slice().reverse().map(o=>`<tr><td><b>${o.id}</b><br><span class="xs mut">${hmd(o.events[0].t)}</span></td><td>${esc(L(P(o.pid).name))}</td><td>${esc(o.buyer)}<br><span class="xs mut">${o.zone}, ${cityOf(o.zone)}</span></td><td>${SELLERS[o.sid].name}</td><td>${o.mode==='relay'?esc(RELAYS[o.relay].name):t('homeDel')}</td><td>${stChip(o)}</td><td class="num">${fcfa(tot(o))}</td></tr>`).join('')}</tbody></table></div>`;
 }
 function aVerify(){
   const apps = S.apps.map(a=>`<div class="card"><div class="row sb"><span class="chip ${a.type==='seller'?'c-a':'c-g'}">${t(a.type==='seller'?'sellerApp':'riderApp')}</span><span class="xs mut">${hm(a.t)}</span></div><b style="font-size:16px">${esc(a.name)}</b><span class="sm mut">${esc(a.owner)} · ${a.zone}</span>
@@ -935,12 +943,12 @@ function aPayments(){
   const c = S.settings.commission/100;
   const rows = S.orders.slice().reverse().map(o=>{ const st=o.status; const state = st==='completed'?['released','c-g'] : (st==='refunded'||st==='refused'||st==='cancelled')?['refunded','c-r'] : st==='disputed'?['frozenSt','c-r'] : (st==='delivered'||st==='atshop')?['awaiting','c-y'] : ['held','c-y'];
     const paid = st==='completed'; const riderPaid = RANK[st]>=6 || st==='disputed';
-    return `<tr><td><b>${o.id}</b></td><td>${t(o.pay)}</td><td class="num">${fcfa(o.price+o.fee)}</td><td><span class="chip ${state[1]}">${t(state[0])}</span></td><td class="num">${paid?fcfa(o.price*(1-c)):'—'}</td><td class="num">${riderPaid?fcfa(o.riderFee):'—'}</td><td class="num">${o.mode==='relay' && RANK[st]>=7 ? fcfa(o.relayFee) : '—'}</td><td class="num">${paid?fcfa(o.price*c):'—'}</td></tr>`; }).join('');
+    return `<tr><td><b>${o.id}</b></td><td>${t(o.pay)}</td><td class="num">${fcfa(tot(o))}</td><td><span class="chip ${state[1]}">${t(state[0])}</span></td><td class="num">${paid?fcfa(o.price*(1-c)):'—'}</td><td class="num">${riderPaid?fcfa(o.riderFee):'—'}</td><td class="num">${o.mode==='relay' ? (RANK[st]>=7 || st==='disputed' ? fcfa(o.relayFee) : (RANK[st]>0 ? `<span class="mut">${fcfa(o.relayFee)}<br><span class="xs">${t('heldTillPickup')}</span></span>` : '—')) : '—'}</td><td class="num">${paid?fcfa(o.price*c):'—'}</td></tr>`; }).join('');
   return `<h2>${t('ledger')}</h2><p class="mut">${t('lg1')}.</p><div class="tw"><table><thead><tr><th>${t('order')}</th><th>${t('payWith')}</th><th class="num">${t('amount')}</th><th>${t('status')}</th><th class="num">${t('toSeller')}</th><th class="num">${t('toRider')}</th><th class="num">${t('toRelayL')}</th><th class="num">${t('grendiCut')}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 function aDisputes(){
   return `<h2>${t('aDisputes')}</h2>${S.disputes.map(d=>{ const o=O(d.oid); const p=P(o.pid); return `<div class="card" style="max-width:640px"><div class="row sb"><b>${t('dispute')} · ${o.id}</b>${d.status==='open'?`<span class="chip c-r">${t('st_disputed')}</span>`:`<span class="chip c-g">${t('resolved')} · ${t(d.result)}</span>`}</div>
-    <div class="li" style="border:0;padding:0"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${o.buyer} ↔ ${SELLERS[o.sid].name} · ${fcfa(o.price+o.fee)}</span></span></div>
+    <div class="li" style="border:0;padding:0"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${o.buyer} ↔ ${SELLERS[o.sid].name} · ${fcfa(tot(o))}</span></span></div>
     <div class="kv"><span>${t('claim')}</span><span>${t(d.reason)}</span></div><p class="sm" style="font-style:italic">${esc(L(d.claim))}</p><div class="field"><label>${t('evidence')}</label><div class="docs">${Array.from({length:d.photos??2},(_, i)=>`<span class="doc">Photo ${i+1}</span>`).join('')}<span class="doc">Chat</span><span class="doc">${S.lang==='fr'?'Annonce':'Listing'}</span></div></div><div class="note n-r">${ic('shield')}<span>${t('frozenSt')} : <b>${fcfa(o.price*(1-S.settings.commission/100))}</b></span></div>
     ${d.status==='open'?`<div class="btns"><button class="btn sec sm" data-a="disp" data-v="${d.id}" data-k="released">${t('releaseSeller')}</button><button class="btn sm" data-a="disp" data-v="${d.id}" data-k="refunded">${t('refundBuyer')}</button></div>`:''}</div>`; }).join('')}`;
 }
@@ -951,13 +959,16 @@ function aRiders(){
 }
 function aSettings(){
   const s = S.settings;
-  const feeRows = c => CITIES[c].zones.map(z=>`<tr><td>${z}</td><td class="num"><input class="inp" id="fee-${z}" inputmode="numeric" value="${s.fees[z]}" data-a="fee" data-k="${z}" style="width:96px;text-align:right"></td><td class="num"><input class="inp" id="sfee-${z}" inputmode="numeric" value="${sfee(z)}" data-a="sfee" data-k="${z}" style="width:96px;text-align:right"></td><td class="num" data-gain="${z}"><b>${fcfa(fee(z)-sfee(z))}</b></td></tr>`).join('');
+  const feeRows = c => CITIES[c].zones.map(z=>`<tr><td>${z}</td><td class="num"><input class="inp" id="fee-${z}" inputmode="numeric" value="${s.fees[z]}" data-a="fee" data-k="${z}" style="width:96px;text-align:right"></td><td class="num"><input class="inp" id="sfee-${z}" inputmode="numeric" value="${sfee(z)}" data-a="sfee" data-k="${z}" style="width:96px;text-align:right"></td></tr>`).join('');
   return `<h2>${t('aSettings')}</h2><p class="mut">${t('settingsNote')}</p><div class="card" style="max-width:640px">
     <div class="set"><b>${t('commissionPct')}</b><input class="inp" id="set-commission" inputmode="numeric" value="${s.commission}" data-a="set" data-k="commission"></div>
     <div class="set"><b>${t('confirmWin')}</b><input class="inp" id="set-confirmH" inputmode="numeric" value="${s.confirmH}" data-a="set" data-k="confirmH"></div>
-    <div class="set"><b>${t('validWin')}</b><input class="inp" id="set-validH" inputmode="numeric" value="${s.validH}" data-a="set" data-k="validH"></div></div>
-    <h3>${t('deliveryFees')}</h3><p class="mut sm">${t('relayFormula')}</p>
-    ${Object.keys(CITIES).map(c=>`<div class="tw" style="max-width:640px"><table style="min-width:420px"><thead><tr><th>${c}</th><th class="num">${t('homeFeeL')}</th><th class="num">${t('relayFeeL')}</th><th class="num">${t('shopEarnL')}</th></tr></thead><tbody>${feeRows(c)}</tbody></table></div>`).join('')}`;
+    <div class="set"><b>${t('validWin')}</b><input class="inp" id="set-validH" inputmode="numeric" value="${s.validH}" data-a="set" data-k="validH"></div>
+    <div class="set"><b>${t('relayBase')}</b><input class="inp" id="set-relayBase" inputmode="numeric" value="${s.relayBase}" data-a="set" data-k="relayBase"></div>
+    <div class="set"><b>${t('relayPct')}</b><input class="inp" id="set-relayPct" inputmode="decimal" value="${s.relayPct}" data-a="set" data-k="relayPct"></div>
+    <p class="sm mut" data-relay-ex>${rt('relayExample')}</p></div>
+    <h3>${t('deliveryFees')}</h3><p class="mut sm">${rt('relayFormula')}</p>
+    ${Object.keys(CITIES).map(c=>`<div class="tw" style="max-width:640px"><table style="min-width:420px"><thead><tr><th>${c}</th><th class="num">${t('homeFeeL')}</th><th class="num">${t('pickupDelL')}</th></tr></thead><tbody>${feeRows(c)}</tbody></table></div>`).join('')}`;
 }
 /* ================= live tracking ================= */
 const NODES = {'Bonabéri':[42,72],'Pont':[98,100],'Akwa':[152,112],'Bonapriso':[126,170],'Deïdo':[176,58],'Bépanda':[232,84],'Makepe':[274,106],'Bonamoussadi':[306,40],'Ndokotti':[236,150],'Logbaba':[308,182],
@@ -1142,7 +1153,7 @@ function act(a, el){
   case 'zone': return;
   case 'pay': ui.input.pay = v; captureCheckout(); break;
   case 'pay-go': { captureCheckout(); ui.input.relay = el.dataset.relay; const pay = ui.input.pay||'momo'; const mode = ui.input.mode||'home';
-    const p=P(v); const price = S.deals[`${v}|Aïcha`]||p.price; const z = mode==='relay' ? RELAYS[ui.input.relay].zone : (ui.input.zone||S.bzone); ui.pin=''; ui.overlay = {type:'momo', pay, amount:price+fee(z), pid:v}; break; }
+    const p=P(v); const price = S.deals[`${v}|Aïcha`]||p.price; const z = mode==='relay' ? RELAYS[ui.input.relay].zone : (ui.input.zone||S.bzone); ui.pin=''; ui.overlay = {type:'momo', pay, amount: mode==='relay' ? price+sfee(z)+shopFee(price) : price+fee(z), pid:v}; break; }
   case 'pin': if(v==='⌫') ui.pin = ui.pin.slice(0,-1); else if(ui.pin.length<4) ui.pin += v; break;
   case 'pay-confirm': placeOrder(ui.overlay.pid); break;
   case 'ov-close': if(el.dataset.stop!==undefined) return; ui.overlay = null; break;
@@ -1151,7 +1162,7 @@ function act(a, el){
     notify('seller', (S.lang==='fr'?'Nouvel avis : ':'New review: ')+stars(S.rated[v])+(tx?' « '+tx.slice(0,60)+' »':'')); break; }
   // seller
   case 's-confirm': { const o=O(v); advance(STEP_MIN.confirmed); setOrder(o,'confirmed'); notify('buyer', (S.lang==='fr'?`${SELLERS[o.sid].name} a confirmé votre commande ${o.id}.`:`${SELLERS[o.sid].name} confirmed your order ${o.id}.`), 'sms'); break; }
-  case 's-decline': { const o=O(v); advance(10); setOrder(o,'cancelled'); P(o.pid).status='live'; notify('buyer', S.lang==='fr'?`Commande ${o.id} annulée. ${fcfa(o.price+o.fee)} remboursés sur votre compte.`:`Order ${o.id} cancelled. ${fcfa(o.price+o.fee)} refunded to your account.`, 'sms'); break; }
+  case 's-decline': { const o=O(v); advance(10); setOrder(o,'cancelled'); P(o.pid).status='live'; notify('buyer', S.lang==='fr'?`Commande ${o.id} annulée. ${fcfa(tot(o))} remboursés sur votre compte.`:`Order ${o.id} cancelled. ${fcfa(tot(o))} refunded to your account.`, 'sms'); break; }
   case 's-ready': { const o=O(v); advance(STEP_MIN.ready); setOrder(o,'ready'); notify('rider', (S.lang==='fr'?'Nouvelle course : ':'New job: ')+`${SELLERS[o.sid].zone} → ${o.zone} · ${fcfa(o.fee)}`); break; }
   case 's-pickup': { const o=O(v); const c = document.getElementById('pk-code').value.trim(); if(c!==o.pickup){ ui.err=true; break; } advance(STEP_MIN.picked); setOrder(o,'picked'); startTrip(o,'toBuyer');
     notify('buyer', S.lang==='fr'?`Votre colis ${o.id} est en route. Code de livraison : ${o.code}. Ne le donnez qu’après avoir vérifié l’article. Suivi : grendi.cm/t/${o.id.replace('GR-','')}`:`Your parcel ${o.id} is on its way. Delivery code: ${o.code}. Only give it after checking the item. Track: grendi.cm/t/${o.id.replace('GR-','')}`, 'sms'); notify('rider', S.lang==='fr'?'Colis récupéré. Direction le client.':'Parcel collected. Head to the buyer.'); break; }
@@ -1197,8 +1208,8 @@ function placeOrder(pid){
   if(!S.sess.seller) S.login.seller.acct = p.sid;
   if(relay && !S.sess.relay) S.login.relay.acct = relay;
   advance(2);
-  const homeFee = fee(zone); const riderFee = mode==='relay' ? sfee(zone) : homeFee;
-  const o = {id:'GR-'+(S.seq++), pid, sid:p.sid, buyer:BUYER.name, zone, landmark: mode==='relay' ? L(RELAYS[relay].addr) : (ui.input.landmark || ''), size: ui.input.size || p.sizes[0], price, fee:homeFee, riderFee, relayFee: mode==='relay' ? homeFee-riderFee : 0, mode, relay, pay, status:'placed', events:[{s:'placed', t:S.clock}], pickup:code4(), code:code4(), shopCode:code4(), demo:true};
+  const dFee = mode==='relay' ? sfee(zone) : fee(zone); const riderFee = dFee;
+  const o = {id:'GR-'+(S.seq++), pid, sid:p.sid, buyer:BUYER.name, zone, landmark: mode==='relay' ? L(RELAYS[relay].addr) : (ui.input.landmark || ''), size: ui.input.size || p.sizes[0], price, fee:dFee, riderFee, relayFee: mode==='relay' ? shopFee(price) : 0, mode, relay, pay, status:'placed', events:[{s:'placed', t:S.clock}], pickup:code4(), code:code4(), shopCode:code4(), demo:true};
   S.orders.push(o); if(!p.lot) p.status = 'sold';
   ui.overlay = {type:'paid', oid:o.id}; ui.input = {};
   notify('seller', (S.lang==='fr'?'Nouvelle commande ':'New order ')+`${o.id} · ${L(p.name)} · ${fcfa(price)}`);
@@ -1259,7 +1270,7 @@ app.addEventListener('click', e=>{
 app.addEventListener('input', e=>{
   const el = e.target;
   if(el.id==='q'){ S.filt.q = el.value; save(); const pos = el.selectionStart; render(); const n=document.getElementById('q'); n.focus(); n.setSelectionRange(pos,pos); }
-  if(el.dataset.a==='set'){ S.settings[el.dataset.k] = num(el.value); save(); }
+  if(el.dataset.a==='set'){ S.settings[el.dataset.k] = el.dataset.k==='relayPct' ? (parseFloat(String(el.value).replace(',','.'))||0) : num(el.value); save(); const ex=document.querySelector('[data-relay-ex]'); if(ex) ex.textContent = rt('relayExample'); }
   if(el.dataset.a==='fee'){ S.settings.fees[el.dataset.k] = num(el.value); save(); }
   if(el.dataset.a==='sfee'){ S.settings.sfees[el.dataset.k] = num(el.value); save(); }
   if(el.dataset.a==='fee'||el.dataset.a==='sfee'){ const g=document.querySelector(`[data-gain="${el.dataset.k}"]`); if(g) g.innerHTML = `<b>${fcfa(fee(el.dataset.k)-sfee(el.dataset.k))}</b>`; }
