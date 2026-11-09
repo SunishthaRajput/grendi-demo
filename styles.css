@@ -348,3 +348,12 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 [hidden]{display:none!important}
 .lmap.big .fl-t{font-size:6px}
 .lmap.big .lbl text{font-size:7px}
+
+/* reviews, report sheet */
+.rev{display:grid;gap:3px;padding-top:10px;border-top:1px solid var(--line)}
+.stars-s{color:#E0A100;letter-spacing:1px;font-size:13px}
+textarea.inp{resize:vertical;font:inherit;min-height:72px}
+button.doc{cursor:pointer;width:auto;padding:0 10px}
+.av svg{width:20px;height:20px}
+.tl li{grid-template-columns:auto 1fr auto}
+.tl .tm{min-width:42px}
