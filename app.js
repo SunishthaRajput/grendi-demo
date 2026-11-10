@@ -60,7 +60,7 @@ fr:{
   sellerApp:'Demande vendeur', riderApp:'Demande livreur', docs:'Documents', momoCheck:'Compte MoMo au même nom', checked:'vérifié', reviewListing:'Articles à vérifier', none:'Rien à traiter.',
   ledger:'Journal des paiements', held:'Bloqué', released:'Versé', refunded:'Remboursé', toSeller:'Au vendeur', toRider:'Au livreur', grendiCut:'Grendi',
   refundBuyer:'Rembourser l’acheteur', releaseSeller:'Payer le vendeur', resolved:'Résolu', dispute:'Litige', claim:'Réclamation', evidence:'Preuves',
-  commissionPct:'Commission sur les ventes (%)', deliveryFees:'Frais de livraison par quartier (FCFA)', codOn:'Paiement à la livraison autorisé', codLimit:'Plafond d’espèces par livreur (FCFA)', confirmWin:'Délai de confirmation vendeur (heures)', settingsNote:'Les changements s’appliquent tout de suite dans les apps.',
+  svcPctL:'Frais de service Grendi, payés par l’acheteur (% du prix de l’article)', deliveryFees:'Frais de livraison par quartier (FCFA)', codOn:'Paiement à la livraison autorisé', codLimit:'Plafond d’espèces par livreur (FCFA)', confirmWin:'Délai de confirmation vendeur (heures)', settingsNote:'Les changements s’appliquent tout de suite dans les apps.',
   zoneL:'Zone', rating:'Note', state:'État', busy:'En course', loggedAs:'Connecté en tant que',
   minutes:'min', hAgo:'il y a', step:'Étape',
   liveTrack:'Suivi en direct', arrivesIn:'Arrive dans', arrived:'Arrivé', searching:'Recherche d’un livreur à proximité…', nearbyRiders:'livreurs à proximité',
@@ -82,7 +82,9 @@ fr:{
   riderChat:'Écrire au livreur', buyerChat:'Écrire au client', chatOpened:'Discussion ouverte avec le livreur. Elle se fermera automatiquement après la livraison.', chatClosed:'Discussion fermée : la livraison est terminée.', rq1:'Je descends dans 2 min', rq2:'Je suis au portail bleu', rq3:'Appelez-moi en arrivant', dq1:'Je suis en route', dq2:'Je suis devant, où êtes-vous ?', dq3:'J’arrive dans 5 min', riderAuto:'D’accord, bien noté 👍', chatOpen:'Ouverte', chatShut:'Fermée',
   location:'Localisation', changeLoc:'Changer de localisation', city:'Ville', cityOnly:'Pour le lancement, on achète et on vend dans sa ville. Articles affichés :', otherCity:'Cet article est vendu à', otherCityS:'Changez votre localisation pour l’acheter.', locSaved:'Localisation mise à jour :', workCity:'Ville de travail', jobsOther:'course(s) disponible(s) à', switchCity:'Passer à',
   reviews:'Avis clients', writeReview:'Votre note et votre avis', reviewPh:'Racontez votre expérience : qualité, taille, délai de livraison…', publishReview:'Publier l’avis', noReviews:'Pas encore d’avis.', yourReview:'Votre avis', reviewsN:'avis',
-  parcels:'Colis', toReceive:'À recevoir', inStore:'En dépôt', handedOver:'Remis', clientCode:'Code de retrait du client', handBtn:'Remettre le colis', relayEarn:'Gains ce mois', relayHanded:'Colis remis au client.', newParcel:'Colis déposé chez vous :', expectedParcel:'Colis attendu :', aRelays:'Points relais', heldNow:'Colis en dépôt', homeFeeL:'Domicile', relayFeeL:'Point relais', shopEarnL:'Gain boutique', validWin:'Délai avant paiement automatique (heures)', toRelayL:'Au point relais', kpiAwait:'À valider par l’acheteur', yourGain:'Votre gain', perParcel:'par colis', perZone:'par quartier', riderGets:'Livreur', today:'Aujourd’hui'
+  parcels:'Colis', toReceive:'À recevoir', inStore:'En dépôt', handedOver:'Remis', clientCode:'Code de retrait du client', handBtn:'Remettre le colis', relayEarn:'Gains ce mois', relayHanded:'Colis remis au client.', newParcel:'Colis déposé chez vous :', expectedParcel:'Colis attendu :', aRelays:'Points relais', heldNow:'Colis en dépôt', homeFeeL:'Domicile', relayFeeL:'Point relais', shopEarnL:'Gain boutique', validWin:'Délai avant paiement automatique (heures)', toRelayL:'Au point relais', kpiAwait:'À valider par l’acheteur', yourGain:'Votre gain', perParcel:'par colis', perZone:'par quartier', riderGets:'Livreur', today:'Aujourd’hui',
+  svcFee:'Frais de service Grendi', svcHow:'{p} % du prix de l’article', sellerFree:'Zéro commission, zéro frais de livraison : l’acheteur paie tout. Vous recevez 100 % du prix de vente.', sellerFeesL:'Commission et livraison', paidByBuyer:'payées par l’acheteur',
+  boost:'Booster', boostT:'Booster cet article', boostS:'Votre article passe en tête des résultats dans votre ville, avec le badge « Sponsorisé ». C’est optionnel : vendre sur Grendi reste gratuit.', day1:'1 jour', days:'jours', duration:'Durée', boostPay:'Payer le boost', sponsored:'Sponsorisé', boostedUntil:'Boosté jusqu’à', boostDone:'Boost activé jusqu’à', boostExtend:'Prolonger', boostRev:'Revenus des boosts', boostsL:'Boosts achetés par les vendeurs', boostPrice:'Prix du boost (FCFA)', boostCta:'Vendez plus vite : boostez un article pour qu’il s’affiche en premier.', svcRev:'Frais de service', sellerFreeA:'Les vendeurs ne paient ni commission ni livraison : ils reçoivent 100 % du prix. Grendi gagne les frais de service (payés par l’acheteur) et les boosts (payés par les vendeurs qui le souhaitent).'
 },
 en:{
   frozenSt:'Frozen', awaitingS:'To validate',
@@ -133,7 +135,7 @@ en:{
   sellerApp:'Seller application', riderApp:'Rider application', docs:'Documents', momoCheck:'MoMo account in same name', checked:'checked', reviewListing:'Listings to review', none:'Nothing to handle.',
   ledger:'Payment ledger', held:'Held', released:'Paid out', refunded:'Refunded', toSeller:'To seller', toRider:'To rider', grendiCut:'Grendi',
   refundBuyer:'Refund buyer', releaseSeller:'Pay seller', resolved:'Resolved', dispute:'Dispute', claim:'Claim', evidence:'Evidence',
-  commissionPct:'Commission on sales (%)', deliveryFees:'Delivery fees by neighbourhood (FCFA)', codOn:'Cash on delivery allowed', codLimit:'Cash limit per rider (FCFA)', confirmWin:'Seller confirmation window (hours)', settingsNote:'Changes apply in the apps straight away.',
+  svcPctL:'Grendi service fee, paid by the buyer (% of the item price)', deliveryFees:'Delivery fees by neighbourhood (FCFA)', codOn:'Cash on delivery allowed', codLimit:'Cash limit per rider (FCFA)', confirmWin:'Seller confirmation window (hours)', settingsNote:'Changes apply in the apps straight away.',
   zoneL:'Zone', rating:'Rating', state:'State', busy:'On a job', loggedAs:'Signed in as',
   minutes:'min', hAgo:'ago', step:'Step',
   liveTrack:'Live tracking', arrivesIn:'Arrives in', arrived:'Arrived', searching:'Finding a rider nearby…', nearbyRiders:'riders nearby',
@@ -155,7 +157,9 @@ en:{
   riderChat:'Message the rider', buyerChat:'Message the buyer', chatOpened:'Chat open with the rider. It closes automatically after delivery.', chatClosed:'Chat closed: delivery is complete.', rq1:'Coming down in 2 min', rq2:'I’m at the blue gate', rq3:'Call me when you arrive', dq1:'I’m on my way', dq2:'I’m outside, where are you?', dq3:'Arriving in 5 min', riderAuto:'OK, noted 👍', chatOpen:'Open', chatShut:'Closed',
   location:'Location', changeLoc:'Change location', city:'City', cityOnly:'For launch, people buy and sell within their own city. Showing items in:', otherCity:'This item is sold in', otherCityS:'Change your location to buy it.', locSaved:'Location updated:', workCity:'Working city', jobsOther:'job(s) available in', switchCity:'Switch to',
   reviews:'Customer reviews', writeReview:'Your rating and review', reviewPh:'Tell others about it: quality, fit, delivery time…', publishReview:'Post review', noReviews:'No reviews yet.', yourReview:'Your review', reviewsN:'reviews',
-  parcels:'Parcels', toReceive:'Coming in', inStore:'In the shop', handedOver:'Handed over', clientCode:'Buyer’s pickup code', handBtn:'Hand over parcel', relayEarn:'Earned this month', relayHanded:'Parcel handed to the buyer.', newParcel:'Parcel dropped at your shop:', expectedParcel:'Parcel on its way:', aRelays:'Pickup shops', heldNow:'Parcels held', homeFeeL:'Home', relayFeeL:'Pickup shop', shopEarnL:'Shop earns', validWin:'Time before automatic payout (hours)', toRelayL:'To pickup shop', kpiAwait:'Waiting for buyer validation', yourGain:'You earn', perParcel:'per parcel', perZone:'by neighbourhood', riderGets:'Rider', today:'Today'
+  parcels:'Parcels', toReceive:'Coming in', inStore:'In the shop', handedOver:'Handed over', clientCode:'Buyer’s pickup code', handBtn:'Hand over parcel', relayEarn:'Earned this month', relayHanded:'Parcel handed to the buyer.', newParcel:'Parcel dropped at your shop:', expectedParcel:'Parcel on its way:', aRelays:'Pickup shops', heldNow:'Parcels held', homeFeeL:'Home', relayFeeL:'Pickup shop', shopEarnL:'Shop earns', validWin:'Time before automatic payout (hours)', toRelayL:'To pickup shop', kpiAwait:'Waiting for buyer validation', yourGain:'You earn', perParcel:'per parcel', perZone:'by neighbourhood', riderGets:'Rider', today:'Today',
+  svcFee:'Grendi service fee', svcHow:'{p}% of the item price', sellerFree:'Zero commission, zero delivery fee: the buyer pays everything. You receive 100% of the sale price.', sellerFeesL:'Commission and delivery', paidByBuyer:'paid by the buyer',
+  boost:'Boost', boostT:'Boost this listing', boostS:'Your listing goes to the top of results in your city, with a “Sponsored” badge. It’s optional: selling on Grendi stays free.', day1:'1 day', days:'days', duration:'Duration', boostPay:'Pay for boost', sponsored:'Sponsored', boostedUntil:'Boosted until', boostDone:'Boost active until', boostExtend:'Extend', boostRev:'Boost revenue', boostsL:'Boosts bought by sellers', boostPrice:'Boost price (FCFA)', boostCta:'Sell faster: boost a listing so it shows first.', svcRev:'Service fees', sellerFreeA:'Sellers pay no commission and no delivery: they receive 100% of the price. Grendi earns the service fee (paid by the buyer) and boosts (paid by sellers who choose them).'
 }};
 
 /* ================= data ================= */
@@ -236,7 +240,9 @@ const RANK = {placed:1, confirmed:2, ready:3, assigned:4, picked:5, atshop:6, de
 const STEP_MIN = {confirmed:18, ready:24, assigned:4, picked:16, delivered:31, atshop:26, collect:95, completed:12};
 
 /* ================= state ================= */
-const KEY = 'grendi-demo-v5';
+const KEY = 'grendi-demo-v6';
+const BOOST_DAYS = [1, 3, 7];
+const SEED_BOOSTS = [{pid:'p2', days:3, t:9*60+5-300}, {pid:'p8', days:1, t:9*60+5-120}, {pid:'p19', days:7, t:9*60+5-2000}];
 const START = 9*60 + 5; // Monday 09:05
 const SEED_REVIEWS = [
   {sid:'s1', author:'Nadège K.', stars:5, t:START-60, text:{fr:'Robe reçue en moins de 2 h, exactement comme sur les photos. Merci !', en:'Dress arrived in under 2 hours, exactly like the photos. Thanks!'}},
@@ -257,7 +263,8 @@ function seed(){
     city:'Douala', bzone:'Bonamoussadi', rchats:{}, relayEarn:{r1:18400, r2:9600, r3:12300, r4:7200, r5:5400, r6:3900},
     reviews: SEED_REVIEWS.map(r=>({...r})),
     filt:{cat:'all', kind:'all', q:''},
-    products: PRODUCTS.map(p=>({...p, status:'live', views: 40 + (p.price % 97)})),
+    products: PRODUCTS.map(p=>{ const b = SEED_BOOSTS.find(x=>x.pid===p.id); return {...p, status:'live', views: 40 + (p.price % 97), boostUntil: b ? b.t + b.days*1440 : 0}; }),
+    boosts: SEED_BOOSTS.map(b=>({pid:b.pid, sid:PRODUCTS.find(p=>p.id===b.pid).sid, days:b.days, amount:{1:500, 3:1200, 7:2500}[b.days], pay:'momo', t:b.t})),
     chats:{
       'p8|Paul E.':{pid:'p8', buyer:'Paul E.', msgs:[{from:'buyer', type:'text', text:'Bonjour, la veste est toujours dispo en L ?', t:START-42}]},
       'p11|Mama Kamga':{pid:'p11', buyer:'Mama Kamga', msgs:[{from:'buyer', type:'offer', amount:26000, status:'pending', t:START-25},{from:'buyer', type:'text', text:'Je prends 3 lots si vous faites 26 000.', t:START-24}]}
@@ -276,7 +283,7 @@ function seed(){
       {id:'a2', type:'rider', name:'Eric Nana', owner:'Eric Nana', zone:'Deïdo', docs:['CNI','Permis A','Photo moto'], status:'pending', t:START-20}
     ],
     disputes:[{id:'d1', oid:'GR-1036', reason:'rNot', claim:{fr:'« La robe a une déchirure sous le bras, pas mentionnée dans l’annonce. »', en:'“The dress has a tear under the arm that wasn’t in the listing.”'}, status:'open'}],
-    settings:{commission:10, confirmH:12, validH:48, relayBase:200, relayPct:2,
+    settings:{svcPct:10, boost1:500, boost3:1200, boost7:2500, confirmH:12, validH:48, relayBase:200, relayPct:2,
       fees:{Akwa:700, Bonapriso:800, 'Deïdo':800, Bonamoussadi:1000, Makepe:1000, 'Bonabéri':1500, Logbaba:1200, Ndokotti:1000, Bastos:900, 'Etoa-Meki':900, Mokolo:800, 'Centre-ville':700, Essos:900, 'Mvog-Mbi':800, 'Biyem-Assi':1200, Ngousso:1100},
       sfees:{Akwa:400, Bonapriso:500, 'Deïdo':500, Bonamoussadi:500, Makepe:600, 'Bonabéri':1000, Logbaba:800, Ndokotti:600, Bastos:550, 'Etoa-Meki':550, Mokolo:500, 'Centre-ville':400, Essos:550, 'Mvog-Mbi':500, 'Biyem-Assi':800, Ngousso:700}},
     rider:{online:true, earnedToday:4300, trips:5, noData:false, city:'Douala'},
@@ -287,7 +294,7 @@ function mkSeed(id,pid,buyer,zone,price,fee,pay,status,t){
   const p = PRODUCTS.find(x=>x.id===pid);
   const ev=[{s:'placed',t}];
   if(status==='completed'||status==='disputed'){let tt=t;['confirmed','ready','assigned','picked','delivered',status].forEach(s=>{tt+=STEP_MIN[s]||15;ev.push({s,t:tt});});}
-  return {id, pid, sid:p.sid, buyer, zone, landmark:'', size:p.sizes[0], price, fee, riderFee:fee, relayFee:0, mode:'home', pay, status, events:ev, pickup:'0000', code:'0000', demo:false, rider:RIDER.name};
+  return {id, pid, sid:p.sid, buyer, zone, landmark:'', size:p.sizes[0], price, fee, riderFee:fee, relayFee:0, svc:Math.round(price*10/100), mode:'home', pay, status, events:ev, pickup:'0000', code:'0000', demo:false, rider:RIDER.name};
 }
 let S;
 try{ S = JSON.parse(localStorage.getItem(KEY)) || seed(); }catch(e){ S = seed(); }
@@ -315,7 +322,13 @@ const advance = m => { S.clock += m; };
 const fee = zone => S.settings.fees[zone] ?? 1000;
 const shopFee = price => Math.round((S.settings.relayBase ?? 200) + price*(S.settings.relayPct ?? 2)/100);
 const rt = k => t(k).replace('{b}', fcfa(S.settings.relayBase ?? 200)).replace('{p}', String(S.settings.relayPct ?? 2).replace('.', S.lang==='fr'?',':'.')).replace('{x}', fcfa(shopFee(5000)));
-const tot = o => o.price + o.fee + (o.relayFee||0);
+const tot = o => o.price + o.fee + (o.relayFee||0) + (o.svc||0);
+const svcFee = price => Math.round(price*(S.settings.svcPct ?? 10)/100);
+const svcHow = () => t('svcHow').replace('{p}', String(S.settings.svcPct ?? 10).replace('.', S.lang==='fr'?',':'.'));
+const boostPrice = d => S.settings['boost'+d] ?? 0;
+const boosted = p => (p.boostUntil||0) > S.clock;
+const untilL = m => { const left = Math.max(0, m - S.clock), d = Math.floor(left/1440), h = Math.round((left%1440)/60); return `${hmd(m)} (${d ? d+(S.lang==='fr'?' j':' d')+(h?' '+h+' h':'') : h+' h'})`; };
+const sponsoredChip = () => `<span class="chip c-y">${ic('bolt','')}${t('sponsored')}</span>`;
 const sfee = zone => S.settings.sfees[zone] ?? Math.max(0, fee(zone)-300);
 const sellerRating = sid => { const r = S.reviews.filter(x=>x.sid===sid); return r.length ? (r.reduce((a,x)=>a+x.stars,0)/r.length) : SELLERS[sid].rating; };
 const stars = n => '★'.repeat(n) + '☆'.repeat(5-n);
@@ -343,6 +356,7 @@ const I = {
   heart:'<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>',
   shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
   check:'<path d="M5 12l5 5L20 7"/>',
+  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
   star:'<path d="M12 3l2.8 5.8 6.2.9-4.5 4.4 1 6.2L12 17.4 6.5 20.3l1-6.2L3 9.7l6.2-.9z"/>',
   alert:'<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/>',
   shirt:'<path d="M8 3l4 2 4-2 5 3-2 4-3-1v12H8V9L5 10 3 6z"/>',
@@ -470,7 +484,8 @@ function buyerApp(){
 }
 function bHome(){
   const f = S.filt;
-  const list = S.products.filter(p=>p.status==='live' && sellerCity(p.sid)===S.city && (f.cat==='all'||p.cat===f.cat) && (f.kind==='all'||p.kind===f.kind) && (!f.q || (L(p.name)+' '+SELLERS[p.sid].name).toLowerCase().includes(f.q.toLowerCase())));
+  const list = S.products.filter(p=>p.status==='live' && sellerCity(p.sid)===S.city && (f.cat==='all'||p.cat===f.cat) && (f.kind==='all'||p.kind===f.kind) && (!f.q || (L(p.name)+' '+SELLERS[p.sid].name).toLowerCase().includes(f.q.toLowerCase())))
+    .map((p,i)=>[p,i]).sort((a,b)=>(boosted(b[0])-boosted(a[0])) || (a[1]-b[1])).map(x=>x[0]); // boosted listings first, otherwise keep the usual order
   const seg = (k, vals) => `<div class="seg">${vals.map(v=>`<button data-a="filt" data-k="${k}" data-v="${v}" aria-pressed="${f[k]===v}">${t(v)}</button>`).join('')}</div>`;
   return `<div class="body"><div class="ah" style="display:grid;gap:10px">
      <div class="row sb"><div><span class="xs mut">${t('hello')}, Aïcha 👋</span><h2 style="font-size:20px">Grendi</h2></div><button class="chip c-n" data-a="loc-open" style="border:1px solid var(--line);cursor:pointer">${ic('pin','')}${S.bzone}, ${S.city} ▾</button></div>
@@ -486,7 +501,7 @@ function bHome(){
 }
 function card(p){
   const s = SELLERS[p.sid]; const liked = S.likes[p.id];
-  return `<button class="pc" data-a="open" data-v="${p.id}"><div class="ph">${photo(p.img, L(p.name), 420)}<span class="tagl">${kindChip(p)}</span><span class="heart" data-a="like" data-v="${p.id}" style="color:${liked?'var(--red)':'var(--ink)'}">${liked?icFill('heart'):ic('heart')}</span></div>
+  return `<button class="pc" data-a="open" data-v="${p.id}"><div class="ph">${photo(p.img, L(p.name), 420)}<span class="tagl" style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">${kindChip(p)}${boosted(p)?sponsoredChip():''}</span><span class="heart" data-a="like" data-v="${p.id}" style="color:${liked?'var(--red)':'var(--ink)'}">${liked?icFill('heart'):ic('heart')}</span></div>
    <div class="meta"><span class="price">${fcfa(p.price)}</span><span class="nm">${esc(L(p.name))}</span><span class="loc">${s.zone} · ★ ${sellerRating(s.id).toFixed(1)} · ${p.sizes.join(', ')}</span></div></button>`;
 }
 function reviewsBlock(sid, max=3){
@@ -500,7 +515,7 @@ function bProduct(id){
   const deal = S.deals[key]; const sizeSel = ui.input.size || p.sizes[0];
   return `<div class="body"><div class="hero-img"><button class="ib float-back" data-a="back" aria-label="Back">${ic('back')}</button>${photo(p.img, L(p.name), 900)}</div>
    <div class="pad">
-     <div class="row" style="flex-wrap:wrap">${kindChip(p)}<span class="chip c-n">${p.neg?t('negotiable'):t('fixed')}</span>${p.status!=='live'?`<span class="chip c-r">${t('soldOut')}</span>`:''}</div>
+     <div class="row" style="flex-wrap:wrap">${kindChip(p)}${boosted(p)?sponsoredChip():''}<span class="chip c-n">${p.neg?t('negotiable'):t('fixed')}</span>${p.status!=='live'?`<span class="chip c-r">${t('soldOut')}</span>`:''}</div>
      <div><h2 style="font-size:21px">${esc(L(p.name))}</h2>
        <div class="row" style="margin-top:6px;align-items:baseline"><span class="price" style="font-size:24px${deal?';text-decoration:line-through;color:var(--mut);font-size:17px':''}">${fcfa(p.price)}</span>${deal?`<span class="price" style="font-size:24px;color:var(--g)">${fcfa(deal)}</span><span class="chip c-g">${t('agreed')}</span>`:''}</div>
        ${p.lot?`<p class="sm mut" style="margin-top:4px">${t('lotOf')} ${p.lot} · ${fcfa(p.price/p.lot)} / ${t('perPiece')}</p>`:''}</div>
@@ -525,7 +540,7 @@ function bCheckout(id){
   const pm = (v, label, sw) => `<button class="li" data-a="pay" data-v="${v}" style="${pay===v?'border-color:var(--g);background:var(--g-soft)':''}"><span class="av" style="background:${sw};color:${v==='momo'?'#111':'#fff'};font-size:11px">${v==='momo'?'MTN':'OM'}</span><span class="mid"><span class="nm">${label}</span><span class="xs mut">+237 ${BUYER.phone}</span></span>${pay===v?ic('check'):''}</button>`;
   const md = (v, title, sub, icn) => `<button class="li" data-a="mode" data-v="${v}" style="align-items:flex-start;${mode===v?'border-color:var(--g);background:var(--g-soft)':''}"><span class="av" style="background:${mode===v?'var(--g)':'var(--soft)'};color:${mode===v?'#fff':'var(--mut)'}">${ic(icn)}</span><span class="mid"><span class="nm">${title}</span><span class="xs mut" style="white-space:normal">${sub}</span></span><b class="sm">${fcfa(v==='home'?f:sfee(rel.zone)+shopFee(price))}</b></button>`;
   const relayList = mode==='relay' ? `<div class="field"><label>${t('chooseRelay')}</label><div style="display:grid;gap:8px">${rels.map(r=>`<button class="li" data-a="relay-pick" data-v="${r.id}" style="${rel.id===r.id?'border-color:#B4236F;background:#FBE9F2':''}"><span class="av" style="background:${r.color}">${ic('bag')}</span><span class="mid"><span class="nm">${esc(r.name)}</span><span class="xs mut" style="white-space:normal">${esc(L(r.addr))} · ${t('openH')} ${r.hours}</span></span>${rel.id===r.id?ic('check'):''}</button>`).join('')}</div><span class="xs mut">${rt('relayPaid')}</span></div>` : '';
-  const dFee = mode==='home' ? f : sfee(rel.zone); const sFee = mode==='relay' ? shopFee(price) : 0;
+  const dFee = mode==='home' ? f : sfee(rel.zone); const sFee = mode==='relay' ? shopFee(price) : 0; const gFee = svcFee(price);
   return `<div class="body"><div class="ah"><button class="ib" data-a="back">${ic('back')}</button><h2>${t('checkout')}</h2></div><div class="pad">
     <div class="li"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${SELLERS[p.sid].name} · ${t('size')} ${esc(ui.input.size||p.sizes[0])}</span></span><span class="b">${fcfa(price)}</span></div>
     <div class="field"><label>${t('deliveryMode')} · ${city}</label><div style="display:grid;gap:8px">${md('home',t('homeDel'),t('homeDelS'),'home')}${md('relay',t('relayDel'),t('relayDelS'),'bag')}</div></div>
@@ -535,9 +550,9 @@ function bCheckout(id){
       <div class="field"><label>${t('landmark')}</label><input class="inp" id="landmark" placeholder="${t('landmarkPh')}" value="${esc(ui.input.landmark ?? (S.lang==='fr'?'Carrefour '+z+', derrière la pharmacie':z+' junction, behind the pharmacy'))}"></div>
       <div class="kv"><span>${t('phone')}</span><span>+237 ${BUYER.phone}</span></div></div>` : ''}
     <div class="field"><label>${t('payWith')}</label><div style="display:grid;gap:8px">${pm('momo',t('momo'),'var(--mtn)')}${pm('om',t('om'),'var(--orange)')}</div></div>
-    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(price)}</span></div><div class="kv"><span>${mode==='home'?t('delivery')+' ('+z+')':t('relayDelFee')}</span><span>${fcfa(dFee)}</span></div>${mode==='relay'?`<div class="kv"><span>${t('relayShopFee')}<br><span class="xs">${rt('relayFeeHow').replace('{v}', fcfa(price))}</span></span><span>${fcfa(sFee)}</span></div>`:''}<div class="divider"></div><div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(price+dFee+sFee)}</span></div></div>
+    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(price)}</span></div><div class="kv"><span>${mode==='home'?t('delivery')+' ('+z+')':t('relayDelFee')}</span><span>${fcfa(dFee)}</span></div>${mode==='relay'?`<div class="kv"><span>${t('relayShopFee')}<br><span class="xs">${rt('relayFeeHow').replace('{v}', fcfa(price))}</span></span><span>${fcfa(sFee)}</span></div>`:''}<div class="kv"><span>${t('svcFee')}<br><span class="xs">${svcHow()}</span></span><span>${fcfa(gFee)}</span></div><div class="divider"></div><div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(price+dFee+sFee+gFee)}</span></div></div>
     <div class="note n-g">${ic('shield')}<span>${t('lg1')}.</span></div>
-    <button class="btn" data-a="pay-go" data-v="${id}" data-relay="${rel.id}">${t('pay')+' '+fcfa(price+dFee+sFee)}</button>
+    <button class="btn" data-a="pay-go" data-v="${id}" data-relay="${rel.id}">${t('pay')+' '+fcfa(price+dFee+sFee+gFee)}</button>
   </div></div>`;
 }
 function bOrders(){
@@ -547,7 +562,7 @@ function bOrders(){
 function orderRow(o, screen, extra=''){
   const p = P(o.pid);
   const chip = RANK[o.status]===0 ? 'c-r' : o.status==='completed' ? 'c-g' : o.status==='disputed' ? 'c-r' : 'c-y';
-  return `<button class="li" data-a="go" data-s="${screen}" data-v="${o.id}"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${o.id} · ${fcfa(tot(o))}${extra}</span><span><span class="chip ${chip}">${t('st_'+o.status)}</span></span></span></button>`;
+  return `<button class="li" data-a="go" data-s="${screen}" data-v="${o.id}"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${o.id} · ${fcfa(S.role==='seller' ? o.price : tot(o))}${extra}</span><span><span class="chip ${chip}">${t('st_'+o.status)}</span></span></span></button>`;
 }
 const FLOW = o => o.mode==='relay' ? ['placed','confirmed','ready','assigned','picked','atshop','delivered','completed'] : ['placed','confirmed','ready','assigned','picked','delivered','completed'];
 function trackList(o){
@@ -592,7 +607,7 @@ function bOrder(id){
     ${rate}
     <div class="card">${trackList(o)}</div>
     <div class="li"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${s.name} · ${t('size')} ${esc(o.size)}</span></span></div>
-    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${o.mode==='relay'?t('relayDelFee'):t('delivery')+' ('+o.zone+')'}</span><span>${fcfa(o.fee)}</span></div>${o.mode==='relay'?`<div class="kv"><span>${t('relayShopFee')}<br><span class="xs">${rt('relayFeeHow').replace('{v}', fcfa(o.price))}</span></span><span>${fcfa(o.relayFee)}</span></div>`:''}<div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(tot(o))}</span></div><div class="kv"><span>${t('payWith')}</span><span>${t(o.pay)}</span></div>
+    <div class="card"><div class="kv"><span>${t('item')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${o.mode==='relay'?t('relayDelFee'):t('delivery')+' ('+o.zone+')'}</span><span>${fcfa(o.fee)}</span></div>${o.mode==='relay'?`<div class="kv"><span>${t('relayShopFee')}<br><span class="xs">${rt('relayFeeHow').replace('{v}', fcfa(o.price))}</span></span><span>${fcfa(o.relayFee)}</span></div>`:''}${o.svc?`<div class="kv"><span>${t('svcFee')}</span><span>${fcfa(o.svc)}</span></div>`:''}<div class="kv tot"><span>${t('totalL')}</span><span>${fcfa(tot(o))}</span></div><div class="kv"><span>${t('payWith')}</span><span>${t(o.pay)}</span></div>
     ${r>0 && r<8 ? `<div class="note n-g">${ic('shield')}<span>${t('heldBy')} : <b>${fcfa(tot(o))}</b></span></div>`:''}</div>
     <button class="btn sec" data-a="chat-open" data-v="${o.pid}|Aïcha">${ic('chat')}${t('chat')} · ${s.name}</button>
     ${S.rchats[o.id] && !S.rchats[o.id].open ? `<button class="btn sec" data-a="rchat-open" data-v="${o.id}">${ic('chat')}${t('riderChat')} · ${t('chatShut')}</button>` : ''}
@@ -691,6 +706,18 @@ function overlay(){
       <div class="note n-b">${ic('pin')}<span>${t('cityOnly')} <b>${c}</b></span></div>
       <button class="btn" data-a="loc-save">${t('save')}</button></div></div>`;
   }
+  if(o.type==='boost'){
+    const p = P(o.pid); const d = o.days; const pay = o.pay;
+    const from = Math.max(S.clock, p.boostUntil||0);
+    const opt = n => `<button class="li" data-a="boost-days" data-v="${n}" style="${d===n?'border-color:var(--amber);background:#FFF6DC':''}"><span class="av" style="background:${d===n?'var(--y)':'var(--soft)'};color:#111">${ic('bolt')}</span><span class="mid"><span class="nm">${n===1?t('day1'):n+' '+t('days')}</span><span class="xs mut">${t('boostedUntil')} ${untilL(from + n*1440)}</span></span><b>${fcfa(boostPrice(n))}</b></button>`;
+    const pm = (v, label, sw) => `<button class="li" data-a="boost-pay" data-v="${v}" style="${pay===v?'border-color:var(--g);background:var(--g-soft)':''}"><span class="av" style="background:${sw};color:${v==='momo'?'#111':'#fff'};font-size:11px">${v==='momo'?'MTN':'OM'}</span><span class="mid"><span class="nm">${label}</span><span class="xs mut">+237 ${SELLERS[p.sid].phone}</span></span>${pay===v?ic('check'):''}</button>`;
+    return `<div class="ov" data-a="ov-close"><div class="sheet" data-stop><span class="grab"></span><h3>${t('boostT')}</h3>
+      <div class="li" style="border:0;padding:0"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="b">${fcfa(p.price)}</span></span></div>
+      <p class="sm mut">${t('boostS')}</p>
+      <div class="field"><label>${t('duration')}</label><div style="display:grid;gap:8px">${BOOST_DAYS.map(opt).join('')}</div></div>
+      <div class="field"><label>${t('payWith')}</label><div style="display:grid;gap:8px">${pm('momo',t('momo'),'var(--mtn)')}${pm('om',t('om'),'var(--orange)')}</div></div>
+      <button class="btn" data-a="boost-go" data-v="${p.id}">${ic('bolt')}${t('boostPay')} · ${fcfa(boostPrice(d))}</button></div></div>`;
+  }
   if(o.type==='edit'){
     const p = P(o.pid);
     return `<div class="ov" data-a="ov-close"><div class="sheet" data-stop><span class="grab"></span><h3>${t('editPrice')}</h3><p class="sm mut">${esc(L(p.name))}</p><div class="cc"><input class="inp" id="edit-price" inputmode="numeric" value="${p.price}" style="font:800 22px/1 var(--disp)" data-autofocus><span class="pre">FCFA</span></div><button class="btn" data-a="edit-save" data-v="${p.id}">${t('save')}</button></div></div>`;
@@ -725,8 +752,9 @@ function sellerApp(){
   return body + overlay() + tabs('seller',[['dash',t('dash'),'home'],['listings',t('listings'),'list'],['add',t('sell'),'plus'],['chats',t('chats'),'chat',pendOffers],['profile',t('profile'),'user']]);
 }
 function sellerMoney(sid){
-  const c = S.settings.commission/100; let held=0, frozen=0, paid=148500;
-  S.orders.filter(o=>o.sid===sid).forEach(o=>{ const r=RANK[o.status]; if(o.status==='completed') paid += o.price*(1-c); else if(o.status==='disputed') frozen += o.price*(1-c); else if(r>0) held += o.price*(1-c); });
+  // The seller always receives 100% of the item price: Grendi's fee and delivery are paid by the buyer.
+  let held=0, frozen=0, paid=148500;
+  S.orders.filter(o=>o.sid===sid).forEach(o=>{ const r=RANK[o.status]; if(o.status==='completed') paid += o.price; else if(o.status==='disputed') frozen += o.price; else if(r>0) held += o.price; });
   return {held, frozen, paid};
 }
 function sDash(){
@@ -738,6 +766,8 @@ function sDash(){
   const sw = other ? `<div class="note n-y">${ic('bell')}<span style="flex:1">${dOrd.id} → <b>${other.name}</b></span><button class="btn sm" data-a="switch-shop" data-v="${other.id}">${S.lang==='fr'?'Ouvrir cette boutique':'Open this shop'}</button></div>` : '';
   return `<div class="body"><div class="ah"><span class="av" style="background:${s.color};width:38px;height:38px">${initials(s.name)}</span><h2>${s.name}<br><span class="xs mut" style="font-family:var(--body);font-weight:500">${t(s.type)} · ${s.zone}</span></h2><span class="chip c-g">${ic('shield')}${t('verified')}</span></div><div class="pad">${sw}
     <div class="stats"><div class="stat"><span>${t('inEscrow')}</span><b>${fcfa(m.held)}</b></div><div class="stat"><span>${t('paidOut')}</span><b>${fcfa(m.paid)}</b></div><div class="stat"><span>${t('frozenL')}</span><b style="${m.frozen?'color:var(--red)':''}">${fcfa(m.frozen)}</b></div><div class="stat"><span>${t('liveListings')}</span><b>${S.products.filter(p=>p.sid===sid&&p.status==='live').length}</b></div></div>
+    <div class="note n-g">${ic('check')}<span>${t('sellerFree')}</span></div>
+    <div class="note n-y" style="flex-wrap:wrap">${ic('bolt')}<span style="flex:1;min-width:160px">${t('boostCta')}</span><button class="btn y sm" data-a="nav" data-v="listings">${t('boost')}</button></div>
     <h3 style="font-size:16px">${t('activeOrders')}</h3>
     ${active.length? active.map(o=>orderRow(o,'order', o.status==='placed'?' · '+t('newOrder'):'')).join('') : `<div class="empty">${ic('bag')}${t('noOrders')}</div>`}
     ${done.length?`<h3 style="font-size:16px">${t('orders')}</h3>${done.map(o=>orderRow(o,'order')).join('')}`:''}
@@ -745,7 +775,7 @@ function sDash(){
   </div></div>`;
 }
 function sOrder(id){
-  const o = O(id); const p = P(o.pid); const c = S.settings.commission/100;
+  const o = O(id); const p = P(o.pid);
   let act = '';
   if(o.status==='placed'){
     const left = S.settings.confirmH*60 - (S.clock - o.events[0].t);
@@ -767,19 +797,21 @@ function sOrder(id){
     const d = S.disputes.find(x=>x.oid===o.id);
     act = `<div class="note n-r">${ic('alert')}<span>${t('sellerFrozen')}${d?`<br><b>${t(d.reason)}</b> · « ${esc(L(d.claim))} »`:''}</span></div>`;
   } else if(o.status==='completed'){
-    act = `<div class="note n-g">${ic('coins')}<span>${t('paidTo')} MTN MoMo +237 ${SELLERS[o.sid].phone} : <b>${fcfa(o.price*(1-c))}</b>${o.autoReleased?' · '+t('autoReleased'):''}</span></div>`;
+    act = `<div class="note n-g">${ic('coins')}<span>${t('paidTo')} MTN MoMo +237 ${SELLERS[o.sid].phone} : <b>${fcfa(o.price)}</b>${o.autoReleased?' · '+t('autoReleased'):''}</span></div>`;
   }
   return `<div class="body"><div class="ah"><button class="ib" data-a="nav" data-v="dash">${ic('back')}</button><h2>${o.id}</h2><span class="chip ${RANK[o.status]===0?'c-r':o.status==='completed'?'c-g':'c-y'}">${t('st_'+o.status)}</span></div><div class="pad">
     <div class="li"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${t('size')} ${esc(o.size)} · ${o.buyer} · ${o.zone}</span></span></div>
     ${act}
-    <div class="card"><div class="kv"><span>${t('price')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${t('commission')} (${S.settings.commission}%)</span><span>− ${fcfa(o.price*c)}</span></div><div class="divider"></div><div class="kv tot"><span>${t('youGet')}</span><span>${fcfa(o.price*(1-c))}</span></div><div class="kv"><span>${t('payWith')}</span><span>${t(o.pay)}</span></div></div>
+    <div class="card"><div class="kv"><span>${t('price')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${t('sellerFeesL')}<br><span class="xs">${t('paidByBuyer')}</span></span><span>0 FCFA</span></div><div class="divider"></div><div class="kv tot"><span>${t('youGet')}</span><span>${fcfa(o.price)}</span></div><div class="kv"><span>${t('payWith')}</span><span>${t(o.pay)}</span></div></div>
+    <div class="note n-g">${ic('check')}<span>${t('sellerFree')}</span></div>
     <div class="card">${trackList(o)}</div>
   </div></div>`;
 }
 function sListings(){
   const sid = S.sess.seller; const mine = S.products.filter(p=>p.sid===sid);
   return `<div class="body"><div class="ah"><h2>${t('listings')}</h2><button class="btn sm" data-a="nav" data-v="add">${ic('plus')}${t('sell')}</button></div><div class="pad">
-   ${mine.map(p=>`<div class="li"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="b">${fcfa(p.price)}</span><span class="xs mut">${p.views} ${t('views')} · ${p.sizes.join(', ')}</span></span><span style="display:grid;gap:6px;justify-items:end"><span class="chip ${p.status==='live'?'c-g':p.status==='pending'?'c-y':'c-n'}">${t(p.status==='live'?'live':p.status==='pending'?'underReview':'sold')}</span>${p.status!=='sold'?`<button class="btn sec sm" data-a="edit-open" data-v="${p.id}">${t('editPrice')}</button>`:''}</span></div>`).join('')}
+   <div class="note n-y">${ic('bolt')}<span>${t('boostS')}</span></div>
+   ${mine.map(p=>`<div class="li" style="align-items:flex-start"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="b">${fcfa(p.price)}</span><span class="xs mut">${p.views} ${t('views')} · ${p.sizes.join(', ')}</span>${boosted(p)?`<span class="xs" style="color:var(--amber)">${t('boostedUntil')} <b>${untilL(p.boostUntil)}</b></span>`:''}</span><span style="display:grid;gap:6px;justify-items:end"><span class="chip ${p.status==='live'?'c-g':p.status==='pending'?'c-y':'c-n'}">${t(p.status==='live'?'live':p.status==='pending'?'underReview':'sold')}</span>${boosted(p)?sponsoredChip():''}${p.status==='live'?`<button class="btn y sm" data-a="boost-open" data-v="${p.id}">${ic('bolt')}${boosted(p)?t('boostExtend'):t('boost')}</button>`:''}${p.status!=='sold'?`<button class="btn sec sm" data-a="edit-open" data-v="${p.id}">${t('editPrice')}</button>`:''}</span></div>`).join('')}
   </div></div>`;
 }
 function sAdd(){
@@ -924,7 +956,8 @@ function aOverview(){
   const feed = today.flatMap(o=>o.events.map(e=>({o,e}))).sort((a,b)=>b.e.t-a.e.t).slice(0,8);
   return `<h2>${t('overview')}</h2><div class="kpis">
     <div class="kpi"><span>${t('ordersToday')}</span><b>${today.length}</b></div><div class="kpi"><span>${t('gmv')}</span><b>${fcfa(gmv)}</b></div><div class="kpi"><span>${t('escrowHeld')}</span><b>${fcfa(held)}</b></div>
-    <div class="kpi"><span>${t('kpiAwait')}</span><b>${awaiting}</b></div><div class="kpi"><span>${t('avgTime')}</span><b>${dur(avg)}</b></div><div class="kpi"><span>${t('openDisputes')}</span><b>${S.disputes.filter(d=>d.status==='open').length}</b></div></div>
+    <div class="kpi"><span>${t('kpiAwait')}</span><b>${awaiting}</b></div><div class="kpi"><span>${t('avgTime')}</span><b>${dur(avg)}</b></div><div class="kpi"><span>${t('openDisputes')}</span><b>${S.disputes.filter(d=>d.status==='open').length}</b></div>
+    <div class="kpi"><span>${t('svcRev')}</span><b>${fcfa(today.filter(o=>o.status==='completed').reduce((a,o)=>a+(o.svc||0),0))}</b></div><div class="kpi"><span>${t('boostRev')}</span><b>${fcfa((S.boosts||[]).reduce((a,b)=>a+b.amount,0))}</b></div></div>
     <h3>${t('liveFeed')}</h3><div class="tw"><table><thead><tr><th>${t('time')}</th><th>${t('order')}</th><th>${t('status')}</th><th>${t('sellerL')}</th><th class="num">${t('amount')}</th></tr></thead><tbody>
     ${feed.map(({o,e})=>`<tr><td>${hmd(e.t)}</td><td><b>${o.id}</b>${o.demo?' <span class="chip c-b">demo</span>':''}</td><td>${t('st_'+e.s)}</td><td>${SELLERS[o.sid].name}</td><td class="num">${fcfa(tot(o))}</td></tr>`).join('')}</tbody></table></div>`;
 }
@@ -940,16 +973,17 @@ function aVerify(){
   return `<h2>${t('aVerify')}</h2><div class="acards">${apps}</div><h3>${t('reviewListing')}</h3>${pend.length?`<div class="acards">${pend.map(p=>`<div class="card"><div class="li" style="border:0;padding:0"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${SELLERS[p.sid].name}</span><b>${fcfa(p.price)}</b></span></div><div class="btns"><button class="btn red sm" data-a="lst" data-v="${p.id}" data-k="rejected">${t('reject')}</button><button class="btn sm" data-a="lst" data-v="${p.id}" data-k="live">${t('approve')}</button></div></div>`).join('')}</div>`:`<p class="mut">${t('none')}</p>`}`;
 }
 function aPayments(){
-  const c = S.settings.commission/100;
   const rows = S.orders.slice().reverse().map(o=>{ const st=o.status; const state = st==='completed'?['released','c-g'] : (st==='refunded'||st==='refused'||st==='cancelled')?['refunded','c-r'] : st==='disputed'?['frozenSt','c-r'] : (st==='delivered'||st==='atshop')?['awaiting','c-y'] : ['held','c-y'];
     const paid = st==='completed'; const riderPaid = RANK[st]>=6 || st==='disputed';
-    return `<tr><td><b>${o.id}</b></td><td>${t(o.pay)}</td><td class="num">${fcfa(tot(o))}</td><td><span class="chip ${state[1]}">${t(state[0])}</span></td><td class="num">${paid?fcfa(o.price*(1-c)):'—'}</td><td class="num">${riderPaid?fcfa(o.riderFee):'—'}</td><td class="num">${o.mode==='relay' ? (RANK[st]>=7 || st==='disputed' ? fcfa(o.relayFee) : (RANK[st]>0 ? `<span class="mut">${fcfa(o.relayFee)}<br><span class="xs">${t('heldTillPickup')}</span></span>` : '—')) : '—'}</td><td class="num">${paid?fcfa(o.price*c):'—'}</td></tr>`; }).join('');
-  return `<h2>${t('ledger')}</h2><p class="mut">${t('lg1')}.</p><div class="tw"><table><thead><tr><th>${t('order')}</th><th>${t('payWith')}</th><th class="num">${t('amount')}</th><th>${t('status')}</th><th class="num">${t('toSeller')}</th><th class="num">${t('toRider')}</th><th class="num">${t('toRelayL')}</th><th class="num">${t('grendiCut')}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    return `<tr><td><b>${o.id}</b></td><td>${t(o.pay)}</td><td class="num">${fcfa(tot(o))}</td><td><span class="chip ${state[1]}">${t(state[0])}</span></td><td class="num">${paid?fcfa(o.price):'—'}</td><td class="num">${riderPaid?fcfa(o.riderFee):'—'}</td><td class="num">${o.mode==='relay' ? (RANK[st]>=7 || st==='disputed' ? fcfa(o.relayFee) : (RANK[st]>0 ? `<span class="mut">${fcfa(o.relayFee)}<br><span class="xs">${t('heldTillPickup')}</span></span>` : '—')) : '—'}</td><td class="num">${paid?fcfa(o.svc||0):'—'}</td></tr>`; }).join('');
+  const bRows = (S.boosts||[]).slice().reverse().map(b=>`<tr><td>${hmd(b.t)}</td><td>${SELLERS[b.sid].name}</td><td>${esc(L(P(b.pid)?.name)||b.pid)}</td><td>${b.days===1?t('day1'):b.days+' '+t('days')}</td><td>${t(b.pay)}</td><td class="num">${fcfa(b.amount)}</td></tr>`).join('');
+  return `<h2>${t('ledger')}</h2><p class="mut">${t('lg1')}. ${t('sellerFreeA')}</p><div class="tw"><table><thead><tr><th>${t('order')}</th><th>${t('payWith')}</th><th class="num">${t('amount')}</th><th>${t('status')}</th><th class="num">${t('toSeller')}</th><th class="num">${t('toRider')}</th><th class="num">${t('toRelayL')}</th><th class="num">${t('grendiCut')} · ${t('svcRev')}</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <h3>${t('boostsL')}</h3><div class="tw"><table><thead><tr><th>${t('time')}</th><th>${t('sellerL')}</th><th>${t('item')}</th><th>${t('duration')}</th><th>${t('payWith')}</th><th class="num">${t('amount')}</th></tr></thead><tbody>${bRows || `<tr><td colspan="6" class="mut">${t('none')}</td></tr>`}</tbody></table></div>`;
 }
 function aDisputes(){
   return `<h2>${t('aDisputes')}</h2>${S.disputes.map(d=>{ const o=O(d.oid); const p=P(o.pid); return `<div class="card" style="max-width:640px"><div class="row sb"><b>${t('dispute')} · ${o.id}</b>${d.status==='open'?`<span class="chip c-r">${t('st_disputed')}</span>`:`<span class="chip c-g">${t('resolved')} · ${t(d.result)}</span>`}</div>
     <div class="li" style="border:0;padding:0"><span class="th">${photo(p.img,L(p.name),160)}</span><span class="mid"><span class="nm">${esc(L(p.name))}</span><span class="xs mut">${o.buyer} ↔ ${SELLERS[o.sid].name} · ${fcfa(tot(o))}</span></span></div>
-    <div class="kv"><span>${t('claim')}</span><span>${t(d.reason)}</span></div><p class="sm" style="font-style:italic">${esc(L(d.claim))}</p><div class="field"><label>${t('evidence')}</label><div class="docs">${Array.from({length:d.photos??2},(_, i)=>`<span class="doc">Photo ${i+1}</span>`).join('')}<span class="doc">Chat</span><span class="doc">${S.lang==='fr'?'Annonce':'Listing'}</span></div></div><div class="note n-r">${ic('shield')}<span>${t('frozenSt')} : <b>${fcfa(o.price*(1-S.settings.commission/100))}</b></span></div>
+    <div class="kv"><span>${t('claim')}</span><span>${t(d.reason)}</span></div><p class="sm" style="font-style:italic">${esc(L(d.claim))}</p><div class="field"><label>${t('evidence')}</label><div class="docs">${Array.from({length:d.photos??2},(_, i)=>`<span class="doc">Photo ${i+1}</span>`).join('')}<span class="doc">Chat</span><span class="doc">${S.lang==='fr'?'Annonce':'Listing'}</span></div></div><div class="note n-r">${ic('shield')}<span>${t('frozenSt')} : <b>${fcfa(o.price)}</b></span></div>
     ${d.status==='open'?`<div class="btns"><button class="btn sec sm" data-a="disp" data-v="${d.id}" data-k="released">${t('releaseSeller')}</button><button class="btn sm" data-a="disp" data-v="${d.id}" data-k="refunded">${t('refundBuyer')}</button></div>`:''}</div>`; }).join('')}`;
 }
 function aRiders(){
@@ -961,7 +995,9 @@ function aSettings(){
   const s = S.settings;
   const feeRows = c => CITIES[c].zones.map(z=>`<tr><td>${z}</td><td class="num"><input class="inp" id="fee-${z}" inputmode="numeric" value="${s.fees[z]}" data-a="fee" data-k="${z}" style="width:96px;text-align:right"></td><td class="num"><input class="inp" id="sfee-${z}" inputmode="numeric" value="${sfee(z)}" data-a="sfee" data-k="${z}" style="width:96px;text-align:right"></td></tr>`).join('');
   return `<h2>${t('aSettings')}</h2><p class="mut">${t('settingsNote')}</p><div class="card" style="max-width:640px">
-    <div class="set"><b>${t('commissionPct')}</b><input class="inp" id="set-commission" inputmode="numeric" value="${s.commission}" data-a="set" data-k="commission"></div>
+    <div class="set"><b>${t('svcPctL')}</b><input class="inp" id="set-svcPct" inputmode="decimal" value="${s.svcPct}" data-a="set" data-k="svcPct"></div>
+    <p class="sm mut">${t('sellerFreeA')}</p>
+    ${BOOST_DAYS.map(d=>`<div class="set"><b>${t('boostPrice')} · ${d===1?t('day1'):d+' '+t('days')}</b><input class="inp" id="set-boost${d}" inputmode="numeric" value="${boostPrice(d)}" data-a="set" data-k="boost${d}"></div>`).join('')}
     <div class="set"><b>${t('confirmWin')}</b><input class="inp" id="set-confirmH" inputmode="numeric" value="${s.confirmH}" data-a="set" data-k="confirmH"></div>
     <div class="set"><b>${t('validWin')}</b><input class="inp" id="set-validH" inputmode="numeric" value="${s.validH}" data-a="set" data-k="validH"></div>
     <div class="set"><b>${t('relayBase')}</b><input class="inp" id="set-relayBase" inputmode="numeric" value="${s.relayBase}" data-a="set" data-k="relayBase"></div>
@@ -1153,9 +1189,13 @@ function act(a, el){
   case 'zone': return;
   case 'pay': ui.input.pay = v; captureCheckout(); break;
   case 'pay-go': { captureCheckout(); ui.input.relay = el.dataset.relay; const pay = ui.input.pay||'momo'; const mode = ui.input.mode||'home';
-    const p=P(v); const price = S.deals[`${v}|Aïcha`]||p.price; const z = mode==='relay' ? RELAYS[ui.input.relay].zone : (ui.input.zone||S.bzone); ui.pin=''; ui.overlay = {type:'momo', pay, amount: mode==='relay' ? price+sfee(z)+shopFee(price) : price+fee(z), pid:v}; break; }
+    const p=P(v); const price = S.deals[`${v}|Aïcha`]||p.price; const z = mode==='relay' ? RELAYS[ui.input.relay].zone : (ui.input.zone||S.bzone); ui.pin=''; ui.overlay = {type:'momo', pay, amount: (mode==='relay' ? price+sfee(z)+shopFee(price) : price+fee(z)) + svcFee(price), pid:v}; break; }
   case 'pin': if(v==='⌫') ui.pin = ui.pin.slice(0,-1); else if(ui.pin.length<4) ui.pin += v; break;
-  case 'pay-confirm': placeOrder(ui.overlay.pid); break;
+  case 'pay-confirm': if(ui.overlay.boost) applyBoost(ui.overlay.boost); else placeOrder(ui.overlay.pid); break;
+  case 'boost-open': ui.overlay = {type:'boost', pid:v, days:3, pay:'momo'}; break;
+  case 'boost-days': ui.overlay.days = +v; break;
+  case 'boost-pay': ui.overlay.pay = v; break;
+  case 'boost-go': { const b = {pid:v, days:ui.overlay.days, pay:ui.overlay.pay}; ui.pin=''; ui.overlay = {type:'momo', pay:b.pay, amount:boostPrice(b.days), boost:b}; break; }
   case 'ov-close': if(el.dataset.stop!==undefined) return; ui.overlay = null; break;
   case 'rate': ui.input.revText = document.getElementById('rev-text')?.value || ''; ui.input.stars = +el.dataset.n; break;
   case 'rate-send': { const o=O(v); const tx = (document.getElementById('rev-text')?.value||'').trim(); S.reviews.push({sid:o.sid, oid:o.id, author:'Aïcha M.', stars:ui.input.stars, text:{fr:tx||'—', en:tx||'—'}, t:S.clock}); S.rated[v]=ui.input.stars; ui.input.stars = 0; ui.input.revText='';
@@ -1209,12 +1249,22 @@ function placeOrder(pid){
   if(relay && !S.sess.relay) S.login.relay.acct = relay;
   advance(2);
   const dFee = mode==='relay' ? sfee(zone) : fee(zone); const riderFee = dFee;
-  const o = {id:'GR-'+(S.seq++), pid, sid:p.sid, buyer:BUYER.name, zone, landmark: mode==='relay' ? L(RELAYS[relay].addr) : (ui.input.landmark || ''), size: ui.input.size || p.sizes[0], price, fee:dFee, riderFee, relayFee: mode==='relay' ? shopFee(price) : 0, mode, relay, pay, status:'placed', events:[{s:'placed', t:S.clock}], pickup:code4(), code:code4(), shopCode:code4(), demo:true};
+  const o = {id:'GR-'+(S.seq++), pid, sid:p.sid, buyer:BUYER.name, zone, landmark: mode==='relay' ? L(RELAYS[relay].addr) : (ui.input.landmark || ''), size: ui.input.size || p.sizes[0], price, fee:dFee, riderFee, relayFee: mode==='relay' ? shopFee(price) : 0, svc: svcFee(price), mode, relay, pay, status:'placed', events:[{s:'placed', t:S.clock}], pickup:code4(), code:code4(), shopCode:code4(), demo:true};
   S.orders.push(o); if(!p.lot) p.status = 'sold';
   ui.overlay = {type:'paid', oid:o.id}; ui.input = {};
   notify('seller', (S.lang==='fr'?'Nouvelle commande ':'New order ')+`${o.id} · ${L(p.name)} · ${fcfa(price)}`);
   if(relay) notify('relay', `${t('expectedParcel')} ${o.id} · ${o.buyer}`);
-  notify('admin', `${o.id} · ${fcfa(price+o.fee)}`);
+  notify('admin', `${o.id} · ${fcfa(tot(o))}`);
+}
+// A paid boost puts the listing first in its city's results with a "Sponsored" badge.
+// Buying again while a boost is running extends it from its current end time.
+function applyBoost(b){
+  const p = P(b.pid); const amount = boostPrice(b.days);
+  p.boostUntil = Math.max(S.clock, p.boostUntil||0) + b.days*1440;
+  (S.boosts = S.boosts || []).push({pid:p.id, sid:p.sid, days:b.days, amount, pay:b.pay, t:S.clock});
+  ui.overlay = null;
+  ui.toast = {text:`${t('boostDone')} ${untilL(p.boostUntil)} · ${fcfa(amount)}`};
+  notify('admin', `${t('boost')} · ${SELLERS[p.sid].name} · ${fcfa(amount)}`);
 }
 function captureCheckout(){
   const lm = document.getElementById('landmark'); if(lm) ui.input.landmark = lm.value;
@@ -1234,8 +1284,7 @@ function rMsg(oid, role, text){
 function complete(o, auto){
   if(o.status==='completed') return;
   setOrder(o,'completed'); o.autoReleased = !!auto;
-  const c = S.settings.commission/100;
-  notify('seller', (S.lang==='fr'?`${o.id} ${auto?'validée automatiquement (48 h)':'validée par l’acheteur'}. ${fcfa(o.price*(1-c))} versés sur votre MoMo.`:`${o.id} ${auto?'auto-validated (48 h)':'validated by the buyer'}. ${fcfa(o.price*(1-c))} paid to your MoMo.`), 'sms');
+  notify('seller', (S.lang==='fr'?`${o.id} ${auto?'validée automatiquement (48 h)':'validée par l’acheteur'}. ${fcfa(o.price)} versés sur votre MoMo.`:`${o.id} ${auto?'auto-validated (48 h)':'validated by the buyer'}. ${fcfa(o.price)} paid to your MoMo.`), 'sms');
   notify('admin', `${o.id} · ${t('st_completed')}`);
   if(auto) notify('buyer', t('autoReleased'));
 }
@@ -1270,7 +1319,7 @@ app.addEventListener('click', e=>{
 app.addEventListener('input', e=>{
   const el = e.target;
   if(el.id==='q'){ S.filt.q = el.value; save(); const pos = el.selectionStart; render(); const n=document.getElementById('q'); n.focus(); n.setSelectionRange(pos,pos); }
-  if(el.dataset.a==='set'){ S.settings[el.dataset.k] = el.dataset.k==='relayPct' ? (parseFloat(String(el.value).replace(',','.'))||0) : num(el.value); save(); const ex=document.querySelector('[data-relay-ex]'); if(ex) ex.textContent = rt('relayExample'); }
+  if(el.dataset.a==='set'){ S.settings[el.dataset.k] = (el.dataset.k==='relayPct'||el.dataset.k==='svcPct') ? (parseFloat(String(el.value).replace(',','.'))||0) : num(el.value); save(); const ex=document.querySelector('[data-relay-ex]'); if(ex) ex.textContent = rt('relayExample'); }
   if(el.dataset.a==='fee'){ S.settings.fees[el.dataset.k] = num(el.value); save(); }
   if(el.dataset.a==='sfee'){ S.settings.sfees[el.dataset.k] = num(el.value); save(); }
   if(el.dataset.a==='fee'||el.dataset.a==='sfee'){ const g=document.querySelector(`[data-gain="${el.dataset.k}"]`); if(g) g.innerHTML = `<b>${fcfa(fee(el.dataset.k)-sfee(el.dataset.k))}</b>`; }
