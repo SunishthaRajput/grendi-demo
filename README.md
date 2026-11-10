@@ -10,9 +10,9 @@ Open the live demo, then switch roles in the top bar. Each role has its own logi
 | Seller | Pick a shop (individual or wholesaler), SMS code 1234 | Accept or counter offers, confirm and pack orders, enter the rider's pickup code, add a listing, change prices, **boost a listing** (paid by MoMo) so it shows first with a "Sponsored" badge |
 | Rider | +237 6 94 55 18 02, SMS code 1234 | Accept a job (opens the chat with the buyer), show the pickup code, enter the buyer's code or drop the parcel at a pickup shop; the chat closes after delivery |
 | Pickup shop | Pick a partner shop, SMS code 1234 | See parcels coming in and held, hand them over against the buyer's pickup code, see earnings (200 FCFA + 2% of the item value per parcel, held until the buyer collects) |
-| Admin | ops@grendi.cm / demo2026 | Live map of all riders, live orders, pickup shops, frozen payments, seller and rider verification, listing review, payment ledger, disputes, riders, settings (buyer service fee, boost prices, delivery fees) |
+| Admin | ops@grendi.cm / demo2026 | Live map of all riders, live orders, pickup shops, frozen payments, seller and rider verification, listing review, payment ledger, disputes, riders, settings (boost prices, delivery fees) |
 
-**Who pays:** the buyer pays everything: the item, delivery (or pickup-shop fees) and a Grendi service fee (10% of the item price by default, set in Admin → Settings). The seller pays no commission and no delivery fee and receives 100% of the sale price. Sellers pay only if they choose to **boost** a listing (1, 3 or 7 days).
+**Who pays:** the buyer pays the item and the delivery (or pickup-shop fees). Grendi takes nothing on a sale: the seller pays no commission and no delivery fee and receives 100% of the sale price. Grendi's only income in the demo is **boosts**, which sellers can choose to buy for a listing (1, 3 or 7 days).
 
 **Payout rule:** the seller is paid only when the buyer validates the order, or automatically 48 hours after delivery with no reply. Reporting an issue freezes the payment until the Grendi team decides. "Simulate 48 h" shows the automatic payout.
 
